@@ -262,3 +262,191 @@ body {
   color: var(--body-muted);
   padding: 24px 0;
 }
+
+/* ------------------------------------------------------------- leaf page (3b)
+ * SIGNED OFF — recreated exactly from the 3b markup. Do not redesign.
+ */
+
+.leaf__card {
+  /* 360px content column + 22px padding + 1px border per side — the exact
+   * measure of the signed-off 3b card, so line breaks match the reference. */
+  max-width: 406px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  font-family: var(--serif);
+  color: var(--ink);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.leaf__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.leaf__crumb {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--label-muted);
+}
+
+/* Styled to be visually identical to the surrounding breadcrumb text — the
+ * route back to the bloom, with no change to the signed-off design. */
+.leaf__crumb-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.leaf__crumb-link:hover,
+.leaf__crumb-link:focus-visible {
+  text-decoration: underline;
+}
+
+.leaf__coords {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--label-muted);
+  text-align: right;
+}
+
+.leaf__title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.leaf__definition {
+  margin: 10px 0 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* Queued state: a single italic line where the definition would sit. */
+.leaf__queued {
+  margin: 10px 0 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--body-muted);
+}
+
+.leaf__labeling-note {
+  margin: 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--body-muted);
+}
+
+.leaf__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaf__section--nearby {
+  gap: 8px;
+}
+
+.leaf__section--helps {
+  gap: 16px;
+}
+
+.leaf__section-label {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--label-muted);
+}
+
+.leaf__nearby {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.leaf__technique {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.leaf__technique-name {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.leaf__technique-body {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+/* Candor, not alarm: the red is on the label only; the body stays the same
+ * quiet serif as everything else. */
+.leaf__breaks {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--body-muted);
+}
+
+/* Weight is left to <strong>: the design marks this up as bold, and with only
+ * Mono 400/500 loaded the browser resolves that to the 500 face. Pinning it to
+ * 400 here would render a lighter label than the signed-off page. */
+.leaf__breaks-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--where-it-breaks);
+}
+
+.leaf__footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--hairline);
+  padding-top: 14px;
+}
+
+.leaf__keep {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-button);
+  padding: 5px 10px;
+  cursor: pointer;
+  /* <button> centres its label by default; the design's <span> does not. */
+  text-align: left;
+}
+
+.leaf__keep:disabled {
+  cursor: default;
+  color: var(--label-muted);
+  border-color: var(--label-muted);
+}
+
+.leaf__keep:focus-visible {
+  outline: 1.8px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.leaf__keep-note {
+  font-size: 11.5px;
+  font-style: italic;
+  color: var(--label-muted);
+}
