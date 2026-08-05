@@ -68,6 +68,16 @@ export function segPath(r0, r1, a0, a1) {
   return `M${x0} ${y0} A${r1} ${r1} 0 ${la} 1 ${x1} ${y1} L${x2} ${y2} A${r0} ${r0} 0 ${la} 0 ${x3} ${y3} Z`;
 }
 
+/**
+ * Full annulus (ring) between r0 and r1, as a single evenodd path.
+ * Used for the bloomed ring's pointer surface.
+ */
+export function annulusPath(r0, r1) {
+  const ring = (rad) =>
+    `M${CX - rad} ${CY} A${rad} ${rad} 0 1 0 ${CX + rad} ${CY} A${rad} ${rad} 0 1 0 ${CX - rad} ${CY} Z`;
+  return `${ring(r1)} ${ring(r0)}`;
+}
+
 /** Arc path, clockwise from a0 to a1. Prototype `arc()`. */
 export function arcPath(rad, a0, a1) {
   const [x0, y0] = pt(rad, a0);

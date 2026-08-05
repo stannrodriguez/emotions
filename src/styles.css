@@ -1,0 +1,264 @@
+/*
+ * Emotion Atlas — design tokens and shell chrome.
+ *
+ * Token values come from the handoff "Design Tokens" section. Every colour used
+ * anywhere in the app is one of these, or an oklch value computed by
+ * src/core/color.js. No shadows anywhere; borders are 1px or hairline 0.7.
+ */
+
+:root {
+  --paper: #f4f0e2;
+  --card-bg: #f9f6ea;
+  --card-bg-alt: #f7f3e7;
+  --ink: #3f3a2c;
+  --body-muted: #5a5443;
+  --label-muted: #7b7461;
+  --hairline: #d6cdb2;
+  --faint-ground: #cfc7ae;
+  --spoke: #ddd6c0;
+  --dashed-input: #a89f85;
+  --where-it-breaks: oklch(0.55 0.12 28);
+
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --serif: 'IBM Plex Serif', Georgia, serif;
+
+  --radius-card: 6px;
+  --radius-button: 3px;
+  --radius-input: 4px;
+
+  /* Horizontal padding of the shell card. The wheel bleeds to the card edges by
+   * cancelling exactly this much, so the two must stay in step. */
+  --card-pad-x: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---------------------------------------------------------------- shell (2c)
+ * Flagged lofi in the handoff: a first pass at chrome and navigation.
+ */
+
+.shell {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 18px 14px 40px;
+}
+
+.shell__card {
+  background: var(--card-bg-alt);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 20px var(--card-pad-x);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.shell__masthead {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.shell__name {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 400;
+}
+
+.shell__tagline {
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--label-muted);
+}
+
+.shell__tabs {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.shell__tab {
+  color: var(--label-muted);
+  text-decoration: none;
+  padding-bottom: 6px;
+  margin-bottom: -9px;
+  border-bottom: 2px solid transparent;
+  background: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.shell__tab[aria-current='page'] {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.shell__tab:focus-visible {
+  outline: 1.8px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.shell__footnote {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--body-muted);
+}
+
+/* On a narrow phone the card becomes the screen. */
+@media (max-width: 480px) {
+  :root {
+    --card-pad-x: 16px;
+  }
+
+  .shell {
+    padding: 12px 0 32px;
+  }
+
+  .shell__card {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 18px var(--card-pad-x);
+  }
+}
+
+/* ---------------------------------------------------------------- wheel (3a) */
+
+/*
+ * The wheel scrolls horizontally when it has to grow past the available width.
+ * Spec: labels never render below 12px on device — "scale the wheel (let it
+ * overflow horizontally or shrink the centre), never the type below 12px".
+ */
+.wheel__scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0 calc(-1 * var(--card-pad-x));
+  padding: 0 var(--card-pad-x);
+  scrollbar-width: thin;
+  scrollbar-color: var(--faint-ground) transparent;
+  overscroll-behavior-x: contain;
+}
+
+.wheel__stage {
+  margin: 0 auto;
+}
+
+.wheel__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: manipulation;
+}
+
+.wheel__seg {
+  cursor: pointer;
+}
+
+.wheel__seg:focus {
+  outline: none;
+}
+
+.wheel__label,
+.wheel__band,
+.wheel__ground {
+  pointer-events: none;
+}
+
+.wheel__center-hit {
+  cursor: pointer;
+}
+
+.wheel__center-hit:focus-visible .wheel__center-circle {
+  stroke-width: 1.8;
+}
+
+/* The single pointer surface for a bloomed ring: it resolves a pointer position
+ * to either a seam or a leaf, so the +/-4deg-or-22px rule can be applied
+ * exactly rather than approximated with a fixed wedge. */
+.wheel__input-surface {
+  fill: transparent;
+}
+
+/* Caption area: min-height reserved so reading a distinction never shifts the
+ * layout under the reader's thumb. */
+.wheel__caption {
+  min-height: 48px;
+  font-family: var(--serif);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--body-muted);
+  border-top: 1px solid var(--hairline);
+  padding-top: 10px;
+  margin: 0;
+}
+
+@keyframes atlas-bloom {
+  from {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.wheel__ring {
+  transform-origin: 360px 360px;
+  animation: atlas-bloom 0.3s ease-out;
+}
+
+/* Spec: respect prefers-reduced-motion by swapping without animation. */
+@media (prefers-reduced-motion: reduce) {
+  .wheel__ring {
+    animation: none;
+  }
+}
+
+/* ------------------------------------------------------------------ loading */
+
+.shell__loading {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--label-muted);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.shell__error {
+  font-family: var(--serif);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--body-muted);
+  padding: 24px 0;
+}
