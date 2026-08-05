@@ -26,8 +26,20 @@ jobs:
       - name: Verify data, palette, and geometry
         run: npm run verify
 
+  verify-ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: npm install && npx playwright install --with-deps chromium
+      - name: Verify the rendered app
+        run: npm run verify:ui
+
   deploy:
-    needs: verify
+    needs: [verify, verify-ui]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
