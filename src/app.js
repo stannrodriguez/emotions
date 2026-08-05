@@ -10,6 +10,8 @@ import { loadTaxonomy } from './core/taxonomy.js';
 import { start, tabOf, navigate as go, href } from './core/router.js';
 import { createWheelView } from './views/wheel.js';
 import { createLeafView } from './views/leaf.js';
+import { createConstellationView } from './views/constellation.js';
+import { createLexiconView } from './views/lexicon.js';
 
 /**
  * View registry. `tab` entries appear in the tab row, in this order; views
@@ -17,6 +19,8 @@ import { createLeafView } from './views/leaf.js';
  */
 const VIEWS = {
   wheel: { tab: 'WHEEL', footnote: true, create: createWheelView },
+  constellation: { tab: 'CONSTELLATION', create: createConstellationView },
+  lexicon: { tab: 'LEXICON', create: createLexiconView },
   leaf: { create: createLeafView },
 };
 

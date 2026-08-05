@@ -450,3 +450,203 @@ body {
   font-style: italic;
   color: var(--label-muted);
 }
+
+/* --------------------------------------------------------- constellation (3c) */
+
+.constellation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.constellation__heading {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--label-muted);
+}
+
+.constellation__frame {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 10px;
+  background: var(--card-bg-alt);
+  /* 320px of drawing + 10px padding + 1px border per side — the measure of the
+   * 3c frame, so the dots keep their designed size. */
+  max-width: 342px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.constellation__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.constellation__dot,
+.constellation__label {
+  pointer-events: none;
+}
+
+.constellation__hit {
+  cursor: pointer;
+}
+
+.constellation__hit:focus-visible {
+  outline: 1.8px solid var(--ink);
+  outline-offset: 1px;
+}
+
+.constellation__caption {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 12.5px;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--label-muted);
+}
+
+/* --------------------------------------------------------------- lexicon (2b) */
+
+.lexicon__card {
+  /* 340px content column + 20px padding + 1px border per side. */
+  max-width: 382px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  font-family: var(--serif);
+  color: var(--ink);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.lexicon__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--mono);
+  padding-bottom: 14px;
+}
+
+.lexicon__title {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--ink);
+}
+
+.lexicon__count {
+  font-size: 10px;
+  color: var(--label-muted);
+}
+
+.lexicon__row {
+  border-top: 1px solid var(--hairline);
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lexicon__row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.lexicon__word {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.lexicon__word--link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lexicon__word--link:hover,
+.lexicon__word--link:focus-visible {
+  text-decoration: underline;
+}
+
+.lexicon__meta {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--label-muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.lexicon__definition {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--body-muted);
+}
+
+/* A wheel word whose page is not written yet says so, in the same voice as the
+ * boundary fallback. */
+.lexicon__queued {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--label-muted);
+}
+
+.lexicon__empty {
+  margin: 0;
+  border-top: 1px solid var(--hairline);
+  padding: 12px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--label-muted);
+}
+
+.lexicon__foot {
+  border-top: 1px solid var(--hairline);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lexicon__add {
+  border: 1px dashed var(--dashed-input);
+  border-radius: var(--radius-input);
+  padding: 9px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink);
+  background: none;
+  cursor: text;
+  width: 100%;
+}
+
+.lexicon__add::placeholder {
+  color: var(--label-muted);
+  opacity: 1;
+}
+
+.lexicon__add:focus-visible {
+  outline: 1.8px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.lexicon__footnote {
+  margin: 0;
+  font-size: 11.5px;
+  font-style: italic;
+  color: var(--label-muted);
+}
