@@ -46,7 +46,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # enablement lets the first run turn Pages on itself, instead of failing
+      # with "Get Pages site failed" until someone flips the repo setting.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       # There is no build step: the repo root is the site. Relative paths
       # throughout mean it works from a project subpath as-is.
       - uses: actions/upload-pages-artifact@v3
