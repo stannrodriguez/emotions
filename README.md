@@ -86,4 +86,17 @@ migration.
 
 ## Deployment
 
-Static; deploys to GitHub Pages from the repo root.
+Static; deploys to GitHub Pages from the repo root. There is no build step — the
+site is the repository, and every path is relative, so it also works from a
+project subpath.
+
+`.github/workflows/pages.yml` deploys on every push to `main`, after both
+verifiers pass.
+
+**One-time setup:** Pages has to be turned on for the repository before the
+first deploy can succeed. Go to **Settings → Pages → Build and deployment** and
+set **Source** to **GitHub Actions**, then re-run the workflow. The workflow
+passes `enablement: true`, which turns Pages on by itself where the token allows
+it, but creating a Pages site needs repository-admin rights that the default
+`GITHUB_TOKEN` does not carry — it fails with *"Create Pages site failed:
+Resource not accessible by integration"* until the setting is flipped by hand.
