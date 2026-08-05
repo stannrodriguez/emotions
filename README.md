@@ -23,16 +23,33 @@ npm start          # serves the repo root at http://localhost:4173
 Any static file server works. Opening `index.html` from `file://` will not,
 because ES modules and `fetch` need an HTTP origin.
 
-## Verifying the data and the maths
+## Verification
 
 ```sh
-npm run verify
+npm run verify        # data, palette, geometry — no browser
+npm run verify:ui     # the rendered app, in Chromium
+npm run verify:all    # both
 ```
 
-Checks family word counts (10 / 11 / 12 / 7 / 12 / 11 = 63), the six written
-distinction keys, the family seam edges, the greyscale lightness ordering, the
-within-bloom arousal ordering, label auto-fit and the 12px floor, seam hit-zone
-widths, and that exactly one word (`resentful`) carries authored content.
+`verify` checks family word counts (10 / 11 / 12 / 7 / 12 / 11 = 63), the six
+written distinction keys, the family seam edges, the greyscale lightness
+ordering, the within-bloom arousal ordering, label auto-fit and upside-down
+rotation, seam hit-zone widths, and that exactly one word (`resentful`) carries
+authored content.
+
+`verify:ui` drives the app: the radius-dependent seam rule, keyboard navigation,
+the five deep links, the bloom animation and its reduced-motion behaviour, the
+12px label floor across eight widths, and both queued states.
+
+It also **pixel-diffs the leaf page against the design file's own 3b markup**,
+which it extracts from `design/Wheel Directions.dc.html` at runtime and serves
+alongside the build. Comparing against `screenshots/leaf-page.png` would be
+misleading — that capture was made on a platform whose text shaping is ~1.4%
+narrower at 14.5px, which reflows a line. Diffing against the markup removes
+the platform from the comparison. It currently reports 0 differing pixels of
+471,366.
+
+Both run in CI and gate the Pages deploy.
 
 ## Layout
 

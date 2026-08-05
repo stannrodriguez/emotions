@@ -15,6 +15,7 @@ import {
   familyFontSize,
   familyLabelIsReversed,
   leafFontSize,
+  leafLabelTransform,
   requiredWheelWidth,
   seamHalfWidthDeg,
   R,
@@ -124,6 +125,32 @@ check('no family label is upside-down', atlas.families.every((f) => {
   const rev = familyLabelIsReversed(f.mid);
   return rev === (f.mid > 100 && f.mid < 260);
 }));
+
+/*
+ * A radial label reads upside-down when its rotation falls outside +/-90deg of
+ * horizontal. Right half: rot = mid - 90 for mid in [0,180] -> [-90, 90].
+ * Left half flips: rot = mid + 90 for mid in (180,360) -> (270,450), i.e.
+ * (-90, 90) mod 360. Assert it holds for every word in every bloom.
+ */
+let upsideDown = 0;
+let readsInward = 0;
+let leftHalf = 0;
+for (const f of atlas.families) {
+  f.words.forEach((w, i) => {
+    const span = 360 / f.words.length;
+    const mid = i * span + span / 2;
+    const { rotation, flip } = leafLabelTransform(mid);
+    const normalised = ((rotation % 360) + 540) % 360 - 180; // -180..180
+    if (Math.abs(normalised) > 90) upsideDown++;
+    if (mid > 180) {
+      leftHalf++;
+      // Flipped labels anchor at the outer radius and run back toward centre.
+      if (flip) readsInward++;
+    }
+  });
+}
+check('no leaf label reads upside-down, in any bloom', upsideDown === 0, `${upsideDown} of 63`);
+check('every left-half leaf label reads inward', readsInward === leftHalf, `${readsInward}/${leftHalf}`);
 
 let minLeafFs = Infinity;
 let longest = '';
