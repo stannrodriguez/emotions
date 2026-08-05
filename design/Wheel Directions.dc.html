@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;family=Space+Grotesk:wght@400..700&amp;family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400..700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#edeae2;font-family:system-ui,sans-serif}
+a{color:#5b6a52}a:hover{color:#3f4c38}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 14px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+@keyframes omBloom{from{opacity:.2;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+</style>
+</helmet>
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Atlas — palette rebuilt from valence, width made honest, quiet candor · rev: bloom carries arousal, grayscale-honest lightness, seams answer everywhere</span></div>
+<p style="max-width:920px;margin:0 0 24px;font:14px/1.6 system-ui,sans-serif;color:#4a463c">Palette now derives from the valence axis first: pleasant families are lighter and warmer, unpleasant ones darker and duskier, and saturation still tracks arousal — happy reads golden, angry reads as heat, not rose. Segment width now encodes exactly one thing: a family's share of the 63 words (so happy is no longer arbitrarily double surprised). The bloomed state — the working heart of the app — is shown beside the root (<a class="dv-oid" href="#3a">3a</a>). The leaf page (<a class="dv-oid" href="#3b">3b</a>) spells out "unpleasant · simmering" and keeps the red label on where-it-breaks but drops the body to quiet type. The constellation (<a class="dv-oid" href="#3c">3c</a>) names only the newest landing; the rest name on tap.</p>
+<div class="dv-opts">
+
+<div class="dv-opt" id="3a" data-screen-label="3a Wheel, valence palette">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Root and bloomed, side by side — both live</div>
+<div class="dv-card" style="background:#f4f0e2">
+<div style="display:flex;flex-direction:column;gap:12px;padding:26px">
+<div style="display:flex;gap:26px;align-items:flex-start">
+<div style="width:470px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">root — width is share of vocabulary</div>
+{{ w3aR }}
+</div>
+<div style="width:470px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">bloomed — angry · the working view</div>
+{{ w3aB }}
+</div>
+</div>
+<div style="min-height:48px;font-family:'IBM Plex Serif',Georgia,serif;font-size:13.5px;line-height:1.55;color:#5a5443;border-top:1px solid #d6cdb2;padding-top:10px">{{ cap3a }}</div>
+<p style="margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-size:12.5px;line-height:1.55;font-style:italic;color:#7b7461">Reading the color: lightness is valence — squint and the families grade from golden happy down to dusky angry and afraid. Saturation is arousal, and it now varies inside a bloom: furious burns deeper than bitter. Boundaries have no markers — the border between any two words answers a tap (or hover) with their distinction; the caption teaches this once on first bloom.</p>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="3b" data-screen-label="3b Leaf page, revised">
+<div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Leaf page — spelled-out coordinates, candor not alarm</div>
+<div class="dv-card" style="background:#f4f0e2">
+<div style="padding:26px">
+<div style="width:360px;background:#f9f6ea;border:1px solid #d6cdb2;border-radius:6px;font-family:'IBM Plex Serif',Georgia,serif;color:#3f3a2c;padding:24px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7b7461">ANGRY / RESENTFUL</span>
+<span style="font-size:12px;font-style:italic;color:#7b7461">unpleasant · simmering</span>
+</div>
+<div>
+<h2 style="margin:0;font-size:30px;font-weight:600;line-height:1.1">Resentful</h2>
+<p style="margin:10px 0 0;font-size:14.5px;line-height:1.6">Anger that has settled in around a specific unfairness — usually one you keep re-encountering, and often aimed at someone you haven't confronted. It accumulates: each new instance lands on the pile of the old ones.</p>
+</div>
+<p style="margin:0;border-top:1px solid #d6cdb2;border-bottom:1px solid #d6cdb2;padding:10px 0;font-size:13px;line-height:1.55;font-style:italic;color:#5a5443">If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;color:#7b7461">NEARBY</div>
+<p style="margin:0;font-size:13.5px;line-height:1.55"><strong>bitter</strong> — resentment that has stopped expecting repair. Resentment still holds a live claim; bitterness has filed it away as how things are.</p>
+<p style="margin:0;font-size:13.5px;line-height:1.55"><strong>indignant</strong> — hotter and more public. Indignation is anger at unfairness on principle, often on someone else's behalf; resentment keeps a personal ledger.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;color:#7b7461">WHAT HELPS</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15.5px;font-weight:600">Name the cost</h3>
+<p style="margin:0;font-size:13.5px;line-height:1.55">Write the sentence “I'm resentful because X keeps costing me Y.” Be exact about X and Y. Precision turns a mood into a claim you can check against the facts.</p>
+<p style="margin:0;font-size:13.5px;line-height:1.55;color:#5a5443"><strong style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:oklch(0.55 0.12 28)">WHERE IT BREAKS</strong> — if the sentence stops changing from day to day, writing has become rehearsal. Stop refining the grievance and act on it.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15.5px;font-weight:600">Reappraise the story</h3>
+<p style="margin:0;font-size:13.5px;line-height:1.55">Look for the least-damning explanation that still fits every fact — “they're overloaded,” not “they don't respect me.” If it genuinely fits, the resentment loses its target.</p>
+<p style="margin:0;font-size:13.5px;line-height:1.55;color:#5a5443"><strong style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:oklch(0.55 0.12 28)">WHERE IT BREAKS</strong> — misused, reappraisal rationalizes an arrangement you should renegotiate or leave. If the facts really are unfair, no better story fixes that.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15.5px;font-weight:600">Make the request</h3>
+<p style="margin:0;font-size:13.5px;line-height:1.55">Resentment usually marks an unspoken contract someone keeps breaking. Say the term out loud to the person who can change it: one sentence, no case file.</p>
+<p style="margin:0;font-size:13.5px;line-height:1.55;color:#5a5443"><strong style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:oklch(0.55 0.12 28)">WHERE IT BREAKS</strong> — only works where someone can actually grant it. If you've asked twice and nothing moved, the next step is a consequence, not a third ask.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;border-top:1px solid #d6cdb2;padding-top:14px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:11px;border:1px solid #3f3a2c;border-radius:3px;padding:5px 10px;cursor:pointer">+ KEEP THIS WORD</span>
+<span style="font-size:11.5px;font-style:italic;color:#7b7461">saved words live in your lexicon, on this device</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="3c" data-screen-label="3c Constellation, revised">
+<div class="dv-olabel"><a class="dv-oid" href="#3c">3c</a>Constellation — one name, the rest on tap</div>
+<div class="dv-card" style="background:#f4f0e2">
+<div style="padding:26px;display:flex;flex-direction:column;gap:12px;width:320px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">recent landings</div>
+<div style="border:1px solid #d6cdb2;border-radius:6px;padding:10px;background:#f7f3e7">{{ c3c }}</div>
+<p style="margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-size:12.5px;line-height:1.55;font-style:italic;color:#7b7461">Only the newest landing is named; tapping any dot names it. Brightness is recency. A mirror, not a tracker.</p>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "draft all 63 leaf pages" · "write the handoff spec" · "show the bloom-and-zoom motion"</p>
+</section>
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Atlas (<a class="dv-oid" href="#1c">1c</a>) fleshed out — label fit, hover previews, lexicon, app shell</span></div>
+<p style="max-width:900px;margin:0 0 24px;font:14px/1.6 system-ui,sans-serif;color:#4a463c">Family labels now curve along their arc and size themselves to fit it (surprised no longer crowds its wedge — its span was also rebalanced from 30° to 40°, taken from happy). Leaf labels auto-fit their radial run. On desktop, hovering a word or a ≠ seam previews it in the caption before a tap commits. New: the lexicon view (<a class="dv-oid" href="#2b">2b</a>) and a first pass at the app shell (<a class="dv-oid" href="#2c">2c</a>) showing how the three views connect.</p>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a" data-screen-label="2a Atlas wheel refit">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Atlas wheel, refit — curved family labels, auto-fit leaves, hover previews</div>
+<div class="dv-card" style="background:#f4f0e2">
+<div style="display:flex;gap:26px;padding:26px;align-items:flex-start">
+<div style="width:560px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">the wheel · desktop · live</div>
+{{ w2aD }}
+<div style="min-height:70px;font-family:'IBM Plex Serif',Georgia,serif;font-size:13.5px;line-height:1.55;color:#5a5443;border-top:1px solid #d6cdb2;padding-top:10px">{{ cap2a }}</div>
+</div>
+<div style="width:300px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">at phone width</div>
+<div style="border:1px solid #d6cdb2;border-radius:6px;padding:14px;background:#f7f3e7">{{ w2aM }}</div>
+<p style="margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-size:12.5px;line-height:1.55;font-style:italic;color:#7b7461">On device, bloomed labels should never render below 12px — the build should scale the wheel, not the type, when space runs out.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="2b" data-screen-label="2b Lexicon">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Lexicon — kept words, including adopted ones</div>
+<div class="dv-card" style="background:#f4f0e2">
+<div style="padding:26px">
+<div style="width:340px;background:#f9f6ea;border:1px solid #d6cdb2;border-radius:6px;font-family:'IBM Plex Serif',Georgia,serif;color:#3f3a2c;padding:22px 20px;display:flex;flex-direction:column;gap:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;padding-bottom:14px">
+<span style="font-size:11px;letter-spacing:2px;color:#3f3a2c">LEXICON</span>
+<span style="font-size:10px;color:#7b7461">5 WORDS · THIS DEVICE</span>
+</div>
+<div style="border-top:1px solid #d6cdb2;padding:12px 0;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:16px">resentful</strong><span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#7b7461">ANGRY · KEPT 3D AGO</span></div>
+<p style="margin:0;font-size:13px;line-height:1.5;color:#5a5443">Anger that has settled in around a specific unfairness.</p>
+</div>
+<div style="border-top:1px solid #d6cdb2;padding:12px 0;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:16px">nostalgic</strong><span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#7b7461">SAD · KEPT 8D AGO</span></div>
+<p style="margin:0;font-size:13px;line-height:1.5;color:#5a5443">Warmth for a past that felt good, felt from a distance.</p>
+</div>
+<div style="border-top:1px solid #d6cdb2;padding:12px 0;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:16px">saudade</strong><span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#7b7461">ADOPTED · PORTUGUESE</span></div>
+<p style="margin:0;font-size:13px;line-height:1.5;color:#5a5443">Longing for someone or something loved and absent, knowing it may not return.</p>
+</div>
+<div style="border-top:1px solid #d6cdb2;padding:12px 0;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:16px">fernweh</strong><span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#7b7461">ADOPTED · GERMAN</span></div>
+<p style="margin:0;font-size:13px;line-height:1.5;color:#5a5443">An ache for distant places you have never seen.</p>
+</div>
+<div style="border-top:1px solid #d6cdb2;padding:12px 0;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><strong style="font-size:16px">amae</strong><span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#7b7461">ADOPTED · JAPANESE</span></div>
+<p style="margin:0;font-size:13px;line-height:1.5;color:#5a5443">The comfortable dependence of leaning on someone who lets you.</p>
+</div>
+<div style="border-top:1px solid #d6cdb2;padding-top:14px;display:flex;flex-direction:column;gap:8px">
+<div style="border:1px dashed #a89f85;border-radius:4px;padding:9px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7b7461;cursor:text">+ ADD A WORD THAT FITS</div>
+<p style="margin:0;font-size:11.5px;font-style:italic;color:#7b7461">Words from the wheel arrive with their page; adopted words carry their origin and a plain definition.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="2c" data-screen-label="2c App shell">
+<div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>App shell — how the three views connect, mobile</div>
+<div class="dv-card" style="background:#f4f0e2">
+<div style="padding:26px">
+<div style="width:320px;background:#f7f3e7;border:1px solid #d6cdb2;border-radius:6px;padding:20px 18px;display:flex;flex-direction:column;gap:14px;font-family:'IBM Plex Serif',Georgia,serif;color:#3f3a2c">
+<div style="display:flex;flex-direction:column;gap:3px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:3px;color:#3f3a2c">EMOTION ATLAS</span>
+<span style="font-size:12.5px;font-style:italic;color:#7b7461">working name — find the word for it</span>
+</div>
+<div style="display:flex;gap:16px;border-bottom:1px solid #d6cdb2;padding-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px">
+<span style="color:#3f3a2c;border-bottom:2px solid #3f3a2c;padding-bottom:6px;margin-bottom:-9px">WHEEL</span>
+<span style="color:#7b7461">CONSTELLATION</span>
+<span style="color:#7b7461">LEXICON</span>
+</div>
+{{ w2cM }}
+<p style="margin:0;border-top:1px solid #d6cdb2;padding-top:10px;font-size:12.5px;line-height:1.55;font-style:italic;color:#5a5443">Naming an emotion precisely measurably dampens it. Finding the word is the first technique, not just the doorway.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "draft all 63 leaf pages" · "write the handoff spec" · "tune the atlas palette" · "riff on <a class="dv-oid" href="#2c">2c</a>'s shell"</p>
+</section>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Four directions for the wheel · every wheel is live — tap a family to bloom it, tap the center to come back</span></div>
+<p style="max-width:900px;margin:0 0 24px;font:14px/1.6 system-ui,sans-serif;color:#4a463c"><strong>Working frame.</strong> Six families — angry, sad, afraid, happy, disgusted, surprised — opening into 63 finer words (draft list at the bottom, for review). The circle is laid out so geography teaches: activated emotions sit high, calm ones low, pleasant on the right, unpleasant on the left. Hue belongs to a family and its valence; saturation and brightness rise with arousal. Distinctions live on the seams — inside a bloomed family, tap a ≠ marker. The leaf page (written out for <em>resentful</em>) and the constellation are static mocks in each direction's voice.</p>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a" data-screen-label="1a Gouache and ink">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Gouache &amp; ink — print warmth, tactile calm</div>
+<div class="dv-card" style="background:#f8f4ec">
+<div style="display:flex;gap:26px;padding:26px;align-items:flex-start">
+<div style="width:560px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:Newsreader,Georgia,serif;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#8a7f68">the wheel · desktop · live</div>
+{{ w1aD }}
+<div style="min-height:70px;font-family:Newsreader,Georgia,serif;font-size:14.5px;line-height:1.5;font-style:italic;color:#544c3d;border-top:1px solid #ddd4c2;padding-top:10px">{{ cap1a }}</div>
+</div>
+<div style="width:300px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:Newsreader,Georgia,serif;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#8a7f68">at phone width</div>
+<div style="border:1px solid #ddd4c2;border-radius:14px;padding:14px;background:#faf7f0">{{ w1aM }}</div>
+<div style="font-family:Newsreader,Georgia,serif;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#8a7f68;margin-top:10px">constellation · recent landings</div>
+<div style="border:1px solid #ddd4c2;border-radius:14px;padding:10px;background:#faf7f0">{{ c1a }}</div>
+<p style="margin:0;font-family:Newsreader,Georgia,serif;font-size:12.5px;line-height:1.5;font-style:italic;color:#8a7f68">The last three weeks, drawn where they landed. Brightness is recency. A mirror, not a tracker.</p>
+</div>
+<div style="width:360px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:Newsreader,Georgia,serif;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#8a7f68">leaf page · mobile</div>
+<div style="background:#fcfaf4;border:1px solid #ddd4c2;border-radius:16px;font-family:Newsreader,Georgia,serif;color:#292319;padding:24px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+<span style="font-size:12.5px;color:#6d6455">angry → <strong>resentful</strong></span>
+<span style="font-size:11.5px;color:#6d6455;font-style:italic">unpleasant · simmering</span>
+</div>
+<div>
+<h2 style="margin:0;font-size:34px;font-weight:500;line-height:1.1">Resentful</h2>
+<p style="margin:10px 0 0;font-size:15.5px;line-height:1.55">Anger that has settled in around a specific unfairness — usually one you keep re-encountering, and often aimed at someone you haven't confronted. It accumulates: each new instance lands on the pile of the old ones.</p>
+</div>
+<p style="margin:0;border-top:1px solid #ddd4c2;border-bottom:1px solid #ddd4c2;padding:10px 0;font-size:13.5px;line-height:1.5;font-style:italic;color:#544c3d">If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:#8a7f68">Nearby</div>
+<p style="margin:0;font-size:14px;line-height:1.5"><strong>bitter</strong> — resentment that has stopped expecting repair. Resentment still holds a live claim; bitterness has filed it away as how things are.</p>
+<p style="margin:0;font-size:14px;line-height:1.5"><strong>indignant</strong> — hotter and more public. Indignation is anger at unfairness on principle, often on someone else's behalf; resentment keeps a personal ledger.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:#8a7f68">What helps</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:16.5px;font-weight:600">Name the cost</h3>
+<p style="margin:0;font-size:14px;line-height:1.5">Write the sentence “I'm resentful because X keeps costing me Y.” Be exact about X and Y. Precision turns a mood into a claim you can check against the facts.</p>
+<p style="margin:0;font-size:13px;line-height:1.45;color:oklch(0.55 0.1 30)"><strong>Where it breaks</strong> — if the sentence stops changing from day to day, writing has become rehearsal. Stop refining the grievance and act on it.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:16.5px;font-weight:600">Reappraise the story</h3>
+<p style="margin:0;font-size:14px;line-height:1.5">Look for the least-damning explanation that still fits every fact — “they're overloaded,” not “they don't respect me.” If it genuinely fits, the resentment loses its target.</p>
+<p style="margin:0;font-size:13px;line-height:1.45;color:oklch(0.55 0.1 30)"><strong>Where it breaks</strong> — misused, reappraisal rationalizes an arrangement you should renegotiate or leave. If the facts really are unfair, no better story fixes that.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:16.5px;font-weight:600">Make the request</h3>
+<p style="margin:0;font-size:14px;line-height:1.5">Resentment usually marks an unspoken contract someone keeps breaking. Say the term out loud to the person who can change it: one sentence, no case file.</p>
+<p style="margin:0;font-size:13px;line-height:1.45;color:oklch(0.55 0.1 30)"><strong>Where it breaks</strong> — only works where someone can actually grant it. If you've asked twice and nothing moved, the next step is a consequence, not a third ask.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;border-top:1px solid #ddd4c2;padding-top:14px">
+<span style="font-size:13px;border:1px solid #292319;border-radius:999px;padding:5px 12px;cursor:pointer">+ keep this word</span>
+<span style="font-size:11.5px;color:#8a7f68;font-style:italic">saved words live in your lexicon, on this device</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b" data-screen-label="1b Lumen">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Lumen — light on a dark ground; brightness is arousal</div>
+<div class="dv-card" style="background:#0b0d13">
+<div style="display:flex;gap:26px;padding:26px;align-items:flex-start">
+<div style="width:560px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Space Grotesk',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#8b8878">the wheel · desktop · live</div>
+{{ w1bD }}
+<div style="min-height:70px;font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.55;color:#a5a291;border-top:1px solid #23262f;padding-top:10px">{{ cap1b }}</div>
+</div>
+<div style="width:300px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Space Grotesk',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#8b8878">at phone width</div>
+<div style="border:1px solid #23262f;border-radius:14px;padding:14px;background:#0e1017">{{ w1bM }}</div>
+<div style="font-family:'Space Grotesk',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#8b8878;margin-top:10px">constellation · recent landings</div>
+<div style="border:1px solid #23262f;border-radius:14px;padding:10px;background:#0e1017">{{ c1b }}</div>
+<p style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:12px;line-height:1.55;color:#8b8878">The last three weeks, drawn where they landed. Brightness is recency. A mirror, not a tracker.</p>
+</div>
+<div style="width:360px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Space Grotesk',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#8b8878">leaf page · mobile</div>
+<div style="background:#12151d;border:1px solid #262a35;border-radius:16px;font-family:'Space Grotesk',sans-serif;color:#d9d6ca;padding:24px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+<span style="font-size:12px;color:#8b8878">angry → <strong style="color:oklch(0.72 0.13 25)">resentful</strong></span>
+<span style="font-size:11px;color:#8b8878">unpleasant · simmering</span>
+</div>
+<div>
+<h2 style="margin:0;font-size:30px;font-weight:600;line-height:1.1;color:oklch(0.78 0.12 25)">Resentful</h2>
+<p style="margin:10px 0 0;font-size:14px;line-height:1.6">Anger that has settled in around a specific unfairness — usually one you keep re-encountering, and often aimed at someone you haven't confronted. It accumulates: each new instance lands on the pile of the old ones.</p>
+</div>
+<p style="margin:0;border-top:1px solid #262a35;border-bottom:1px solid #262a35;padding:10px 0;font-size:12.5px;line-height:1.55;color:#a5a291">If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8b8878">Nearby</div>
+<p style="margin:0;font-size:13px;line-height:1.55"><strong style="color:#eceadf">bitter</strong> — resentment that has stopped expecting repair. Resentment still holds a live claim; bitterness has filed it away as how things are.</p>
+<p style="margin:0;font-size:13px;line-height:1.55"><strong style="color:#eceadf">indignant</strong> — hotter and more public. Indignation is anger at unfairness on principle, often on someone else's behalf; resentment keeps a personal ledger.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8b8878">What helps</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15px;font-weight:600;color:#eceadf">Name the cost</h3>
+<p style="margin:0;font-size:13px;line-height:1.55">Write the sentence “I'm resentful because X keeps costing me Y.” Be exact about X and Y. Precision turns a mood into a claim you can check against the facts.</p>
+<p style="margin:0;font-size:12.5px;line-height:1.5;color:oklch(0.72 0.13 25)"><strong>Where it breaks</strong> — if the sentence stops changing from day to day, writing has become rehearsal. Stop refining the grievance and act on it.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15px;font-weight:600;color:#eceadf">Reappraise the story</h3>
+<p style="margin:0;font-size:13px;line-height:1.55">Look for the least-damning explanation that still fits every fact — “they're overloaded,” not “they don't respect me.” If it genuinely fits, the resentment loses its target.</p>
+<p style="margin:0;font-size:12.5px;line-height:1.5;color:oklch(0.72 0.13 25)"><strong>Where it breaks</strong> — misused, reappraisal rationalizes an arrangement you should renegotiate or leave. If the facts really are unfair, no better story fixes that.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15px;font-weight:600;color:#eceadf">Make the request</h3>
+<p style="margin:0;font-size:13px;line-height:1.55">Resentment usually marks an unspoken contract someone keeps breaking. Say the term out loud to the person who can change it: one sentence, no case file.</p>
+<p style="margin:0;font-size:12.5px;line-height:1.5;color:oklch(0.72 0.13 25)"><strong>Where it breaks</strong> — only works where someone can actually grant it. If you've asked twice and nothing moved, the next step is a consequence, not a third ask.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;border-top:1px solid #262a35;padding-top:14px">
+<span style="font-size:12.5px;border:1px solid #5a5d68;color:#eceadf;border-radius:999px;padding:5px 12px;cursor:pointer">+ keep this word</span>
+<span style="font-size:11px;color:#8b8878">saved words live in your lexicon, on this device</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c" data-screen-label="1c Atlas">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Atlas — the wheel as surveyed terrain</div>
+<div class="dv-card" style="background:#f4f0e2">
+<div style="display:flex;gap:26px;padding:26px;align-items:flex-start">
+<div style="width:560px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">the wheel · desktop · live</div>
+{{ w1cD }}
+<div style="min-height:70px;font-family:'IBM Plex Serif',Georgia,serif;font-size:13.5px;line-height:1.55;color:#5a5443;border-top:1px solid #d6cdb2;padding-top:10px">{{ cap1c }}</div>
+</div>
+<div style="width:300px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">at phone width</div>
+<div style="border:1px solid #d6cdb2;border-radius:6px;padding:14px;background:#f7f3e7">{{ w1cM }}</div>
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461;margin-top:10px">constellation · recent landings</div>
+<div style="border:1px solid #d6cdb2;border-radius:6px;padding:10px;background:#f7f3e7">{{ c1c }}</div>
+<p style="margin:0;font-family:'IBM Plex Serif',Georgia,serif;font-size:12.5px;line-height:1.5;font-style:italic;color:#7b7461">The last three weeks, drawn where they landed. Brightness is recency. A mirror, not a tracker.</p>
+</div>
+<div style="width:360px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7b7461">leaf page · mobile</div>
+<div style="background:#f9f6ea;border:1px solid #d6cdb2;border-radius:6px;font-family:'IBM Plex Serif',Georgia,serif;color:#3f3a2c;padding:24px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-family:'IBM Plex Mono',monospace">
+<span style="font-size:11px;color:#7b7461">ANGRY / RESENTFUL</span>
+<span style="font-size:10px;color:#7b7461">UNPL · SIMMERING</span>
+</div>
+<div>
+<h2 style="margin:0;font-size:30px;font-weight:600;line-height:1.1">Resentful</h2>
+<p style="margin:10px 0 0;font-size:14.5px;line-height:1.6">Anger that has settled in around a specific unfairness — usually one you keep re-encountering, and often aimed at someone you haven't confronted. It accumulates: each new instance lands on the pile of the old ones.</p>
+</div>
+<p style="margin:0;border-top:1px solid #d6cdb2;border-bottom:1px solid #d6cdb2;padding:10px 0;font-size:13px;line-height:1.55;font-style:italic;color:#5a5443">If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;color:#7b7461">NEARBY</div>
+<p style="margin:0;font-size:13.5px;line-height:1.55"><strong>bitter</strong> — resentment that has stopped expecting repair. Resentment still holds a live claim; bitterness has filed it away as how things are.</p>
+<p style="margin:0;font-size:13.5px;line-height:1.55"><strong>indignant</strong> — hotter and more public. Indignation is anger at unfairness on principle, often on someone else's behalf; resentment keeps a personal ledger.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;color:#7b7461">WHAT HELPS</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15.5px;font-weight:600">Name the cost</h3>
+<p style="margin:0;font-size:13.5px;line-height:1.55">Write the sentence “I'm resentful because X keeps costing me Y.” Be exact about X and Y. Precision turns a mood into a claim you can check against the facts.</p>
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.5;color:oklch(0.58 0.1 25)"><strong>WHERE IT BREAKS</strong> — if the sentence stops changing from day to day, writing has become rehearsal. Stop refining the grievance and act on it.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15.5px;font-weight:600">Reappraise the story</h3>
+<p style="margin:0;font-size:13.5px;line-height:1.55">Look for the least-damning explanation that still fits every fact — “they're overloaded,” not “they don't respect me.” If it genuinely fits, the resentment loses its target.</p>
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.5;color:oklch(0.58 0.1 25)"><strong>WHERE IT BREAKS</strong> — misused, reappraisal rationalizes an arrangement you should renegotiate or leave. If the facts really are unfair, no better story fixes that.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:15.5px;font-weight:600">Make the request</h3>
+<p style="margin:0;font-size:13.5px;line-height:1.55">Resentment usually marks an unspoken contract someone keeps breaking. Say the term out loud to the person who can change it: one sentence, no case file.</p>
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.5;color:oklch(0.58 0.1 25)"><strong>WHERE IT BREAKS</strong> — only works where someone can actually grant it. If you've asked twice and nothing moved, the next step is a consequence, not a third ask.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;border-top:1px solid #d6cdb2;padding-top:14px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:11px;border:1px solid #3f3a2c;border-radius:3px;padding:5px 10px;cursor:pointer">+ KEEP THIS WORD</span>
+<span style="font-size:11.5px;font-style:italic;color:#7b7461">saved words live in your lexicon, on this device</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1d" data-screen-label="1d Set in type">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Set in type — no wedges; the words are the wheel</div>
+<div class="dv-card" style="background:#f7f5ef">
+<div style="display:flex;gap:26px;padding:26px;align-items:flex-start">
+<div style="width:560px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Instrument Sans',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#777161">the wheel · desktop · live</div>
+{{ w1dD }}
+<div style="min-height:70px;font-family:'Instrument Serif',Georgia,serif;font-size:16px;line-height:1.45;font-style:italic;color:#5c5647;border-top:1px solid #ddd8c9;padding-top:10px">{{ cap1d }}</div>
+</div>
+<div style="width:300px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Instrument Sans',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#777161">at phone width</div>
+<div style="border:1px solid #ddd8c9;border-radius:14px;padding:14px;background:#faf8f3">{{ w1dM }}</div>
+<div style="font-family:'Instrument Sans',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#777161;margin-top:10px">constellation · recent landings</div>
+<div style="border:1px solid #ddd8c9;border-radius:14px;padding:10px;background:#faf8f3">{{ c1d }}</div>
+<p style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:14px;line-height:1.45;font-style:italic;color:#777161">The last three weeks, drawn where they landed. Brightness is recency. A mirror, not a tracker.</p>
+</div>
+<div style="width:360px;flex:none;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Instrument Sans',sans-serif;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#777161">leaf page · mobile</div>
+<div style="background:#fbf9f4;border:1px solid #ddd8c9;border-radius:16px;font-family:'Instrument Sans',sans-serif;color:#22201b;padding:24px 22px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+<span style="font-size:12px;color:#777161">angry → <strong>resentful</strong></span>
+<span style="font-size:11px;color:#777161;font-style:italic">unpleasant · simmering</span>
+</div>
+<div>
+<h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:40px;font-weight:400;line-height:1.05;color:oklch(0.5 0.12 25)">Resentful</h2>
+<p style="margin:10px 0 0;font-size:14px;line-height:1.6">Anger that has settled in around a specific unfairness — usually one you keep re-encountering, and often aimed at someone you haven't confronted. It accumulates: each new instance lands on the pile of the old ones.</p>
+</div>
+<p style="margin:0;border-top:1px solid #ddd8c9;border-bottom:1px solid #ddd8c9;padding:10px 0;font-family:'Instrument Serif',Georgia,serif;font-size:15px;line-height:1.45;font-style:italic;color:#5c5647">If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#777161">Nearby</div>
+<p style="margin:0;font-size:13px;line-height:1.55"><strong>bitter</strong> — resentment that has stopped expecting repair. Resentment still holds a live claim; bitterness has filed it away as how things are.</p>
+<p style="margin:0;font-size:13px;line-height:1.55"><strong>indignant</strong> — hotter and more public. Indignation is anger at unfairness on principle, often on someone else's behalf; resentment keeps a personal ledger.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#777161">What helps</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:19px;font-weight:400">Name the cost</h3>
+<p style="margin:0;font-size:13px;line-height:1.55">Write the sentence “I'm resentful because X keeps costing me Y.” Be exact about X and Y. Precision turns a mood into a claim you can check against the facts.</p>
+<p style="margin:0;font-size:12.5px;line-height:1.5;color:oklch(0.5 0.12 25)"><strong>Where it breaks</strong> — if the sentence stops changing from day to day, writing has become rehearsal. Stop refining the grievance and act on it.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:19px;font-weight:400">Reappraise the story</h3>
+<p style="margin:0;font-size:13px;line-height:1.55">Look for the least-damning explanation that still fits every fact — “they're overloaded,” not “they don't respect me.” If it genuinely fits, the resentment loses its target.</p>
+<p style="margin:0;font-size:12.5px;line-height:1.5;color:oklch(0.5 0.12 25)"><strong>Where it breaks</strong> — misused, reappraisal rationalizes an arrangement you should renegotiate or leave. If the facts really are unfair, no better story fixes that.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-size:19px;font-weight:400">Make the request</h3>
+<p style="margin:0;font-size:13px;line-height:1.55">Resentment usually marks an unspoken contract someone keeps breaking. Say the term out loud to the person who can change it: one sentence, no case file.</p>
+<p style="margin:0;font-size:12.5px;line-height:1.5;color:oklch(0.5 0.12 25)"><strong>Where it breaks</strong> — only works where someone can actually grant it. If you've asked twice and nothing moved, the next step is a consequence, not a third ask.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;border-top:1px solid #ddd8c9;padding-top:14px">
+<span style="font-size:12.5px;border:1px solid #22201b;border-radius:999px;padding:5px 12px;cursor:pointer">+ keep this word</span>
+<span style="font-size:11px;color:#777161;font-style:italic">saved words live in your lexicon, on this device</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div style="max-width:1324px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;padding:22px 26px;margin-top:30px;font-family:'IBM Plex Mono',monospace">
+<div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a8474;margin-bottom:14px">Taxonomy draft — 6 families · 63 words · for review</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px 28px">
+<sc-for list="{{ taxonomy }}" as="fam" hint-placeholder-count="6">
+<div style="font-size:12.5px;line-height:1.65;color:#4c473a"><strong style="text-transform:capitalize">{{ fam.label }}</strong> <span style="color:#8a8474">({{ fam.count }})</span><br>{{ fam.words }}</div>
+</sc-for>
+</div>
+<p style="margin:14px 0 0;font-size:12px;line-height:1.6;color:#8a8474">Ordering is adjacency: each word sits beside its nearest neighbor, and family edges meet at real boundaries — serene | nostalgic, disdainful | contemptuous, furious | panicked, wary | startled, awed | excited.</p>
+</div>
+<p class="dv-next">Try next: "build out <a class="dv-oid" href="#1b">1b</a> end to end" · "the wheel from <a class="dv-oid" href="#1d">1d</a> with the leaf page from <a class="dv-oid" href="#1a">1a</a>" · "another round of unexpected directions"</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;seamMarkers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Wheel&quot;},&quot;constellationNames&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Constellation&quot;}}">
+class Component extends DCLogic {
+  state = { views: {}, caps: {} };
+
+  get cores() {
+    if (!this._cores) {
+      const raw = [
+        ['surprised', 60, .85, .5, [['startled',.95],['shocked',.9],['stunned',.8],['disoriented',.7],['confused',.55],['bewildered',.6],['curious',.5],['intrigued',.55],['amazed',.75],['awed',.65]]],
+        ['happy', 90, .55, .9, [['excited',.9],['joyful',.8],['amused',.6],['proud',.6],['hopeful',.55],['grateful',.4],['affectionate',.45],['moved',.5],['content',.25],['relieved',.35],['serene',.12]]],
+        ['sad', 245, .3, .15, [['nostalgic',.3],['grieving',.5],['melancholy',.25],['homesick',.35],['lonely',.35],['hurt',.55],['disappointed',.45],['discouraged',.35],['hopeless',.2],['regretful',.4],['guilty',.5],['ashamed',.45]]],
+        ['disgusted', 120, .45, .15, [['alienated',.35],['averse',.4],['squeamish',.5],['revolted',.7],['appalled',.75],['scornful',.6],['disdainful',.5]]],
+        ['angry', 25, .75, .1, [['contemptuous',.55],['envious',.5],['jealous',.6],['betrayed',.65],['bitter',.45],['resentful',.5],['indignant',.7],['exasperated',.75],['frustrated',.7],['impatient',.65],['irritated',.6],['furious',.97]]],
+        ['afraid', 305, .8, .12, [['panicked',.97],['overwhelmed',.85],['dreading',.6],['anxious',.75],['worried',.55],['suspicious',.5],['insecure',.45],['self-conscious',.5],['vulnerable',.4],['helpless',.3],['wary',.45]]]
+      ];
+      const total = raw.reduce((s, r) => s + r[4].length, 0);
+      let ang = -(raw[0][4].length / total * 360) / 2;
+      this._cores = raw.map(([id, hue, a, val, leaves]) => {
+        const span = leaves.length / total * 360;
+        const c = { id, hue, a, val, span, leaves, a0: ang, a1: ang + span, mid: ang + span / 2 };
+        ang += span; return c;
+      });
+    }
+    return this._cores;
+  }
+
+  DIST = {
+    'guilty|ashamed': 'Guilt is about what you did; shame is about what you are. Guilt points at an act you could repair. Shame points at the self — which is why it makes you hide.',
+    'envious|jealous': 'Envy wants something someone else has. Jealousy guards something you already have against losing it to someone else.',
+    'anxious|worried': 'Worry loops on a specific problem and stays mostly in words. Anxiety is the body bracing for a threat that may have no name yet.',
+    'disappointed|discouraged': 'Disappointment is about an outcome that fell short. Discouragement is about whether to keep trying at all.',
+    'nostalgic|grieving': 'Both look back. Nostalgia visits a past that felt good, and returns. Grief reaches for something that is not coming back.',
+    'bitter|resentful': 'Resentment still holds a live claim against someone. Bitterness has stopped expecting repair and settled into how things are.'
+  };
+
+  DEFCAP = 'Tap a family to bloom it into finer words. Precise naming is itself regulation: labeling an emotion measurably lowers its intensity.';
+
+  CFG = {
+    '1a': {
+      lab: 'Newsreader, Georgia, serif', coreFs: 33, leafFs: () => 25,
+      sub: '#6d6455', ink: '#292319',
+      seg: (hue, a, sel) => ({ fill: `oklch(${this.r(.845 - .26 * a)} ${this.r(.048 + .088 * a)} ${hue})`, stroke: '#292319', strokeWidth: sel ? 2.6 : 1.1 }),
+      txt: () => '#292319',
+      centerFill: '#f8f4ec', centerStroke: '#292319',
+      seam: { fill: '#f8f4ec', stroke: '#292319', txt: '#292319' },
+      ghost: '#d8cfbc', spoke: '#e7dfcd',
+      dot: (hue, a, rec) => `oklch(${this.r(.6 - .18 * a)} ${this.r(.05 + .06 * a)} ${hue} / ${this.r(.3 + .7 * rec)})`
+    },
+    '1b': {
+      lab: "'Space Grotesk', sans-serif", coreFs: 29, leafFs: () => 23,
+      sub: '#8b8878', ink: '#e6e3d8',
+      seg: (hue, a, sel) => ({ fill: `oklch(${this.r(.42 + .32 * a)} ${this.r(.085 + .125 * a)} ${hue} / 0.94)`, stroke: sel ? '#e6e3d8' : '#0b0d13', strokeWidth: sel ? 1.6 : 2, glow: `drop-shadow(0 0 ${Math.round(3 + 12 * a)}px oklch(${this.r(.5 + .3 * a)} ${this.r(.09 + .11 * a)} ${hue} / 0.5))` }),
+      txt: (hue, a) => a > .5 ? '#0b0d13' : '#e6e3d8',
+      centerFill: '#0e1017', centerStroke: '#2a2d38',
+      seam: { fill: '#0b0d13', stroke: '#5a5d68', txt: '#c9c6ba' },
+      ghost: '#23262f', spoke: '#1b1e26',
+      dot: (hue, a, rec) => `oklch(${this.r(.55 + .25 * rec)} ${this.r(.1 + .08 * a)} ${hue} / ${this.r(.35 + .65 * rec)})`, glowDot: true
+    },
+    '1c': {
+      lab: "'IBM Plex Mono', monospace", coreFs: 20, ls: 2.5, upper: true, leafFs: () => 17.5,
+      sub: '#7b7461', ink: '#3f3a2c',
+      seg: (hue, a, sel) => ({ fill: `oklch(${this.r(.945 - .055 * a)} ${this.r(.015 + .028 * a)} ${hue})`, stroke: '#3f3a2c', strokeWidth: sel ? 1.8 : 0.7 }),
+      band: (hue, a) => `oklch(${this.r(.6 + .14 * a)} ${this.r(.085 + .075 * a)} ${hue})`,
+      txt: () => '#3f3a2c',
+      centerFill: '#f4f0e2', centerStroke: '#3f3a2c',
+      seam: { fill: '#f4f0e2', stroke: '#3f3a2c', txt: '#3f3a2c' },
+      faint: '#cfc7ae', ghost: '#cfc7ae', spoke: '#ddd6c0',
+      dot: (hue, a, rec) => `oklch(${this.r(.55 - .1 * a)} ${this.r(.06 + .05 * a)} ${hue} / ${this.r(.3 + .7 * rec)})`
+    },
+    '2a': {
+      lab: "'IBM Plex Mono', monospace", coreFs: 23, ls: 2, upper: true, curved: true, fit: true, leafFs: () => 20,
+      sub: '#7b7461', ink: '#3f3a2c',
+      seg: (hue, a, sel) => ({ fill: `oklch(${this.r(.945 - .055 * a)} ${this.r(.015 + .028 * a)} ${hue})`, stroke: '#3f3a2c', strokeWidth: sel ? 1.8 : 0.7 }),
+      band: (hue, a) => `oklch(${this.r(.6 + .14 * a)} ${this.r(.085 + .075 * a)} ${hue})`,
+      txt: () => '#3f3a2c',
+      centerFill: '#f4f0e2', centerStroke: '#3f3a2c',
+      seam: { fill: '#f4f0e2', stroke: '#3f3a2c', txt: '#3f3a2c' },
+      faint: '#cfc7ae', ghost: '#cfc7ae', spoke: '#ddd6c0',
+      dot: (hue, a, rec) => `oklch(${this.r(.55 - .1 * a)} ${this.r(.06 + .05 * a)} ${hue} / ${this.r(.3 + .7 * rec)})`
+    },
+    '3a': {
+      lab: "'IBM Plex Mono', monospace", coreFs: 23, ls: 2, upper: true, curved: true, fit: true, leafFs: () => 20, latestOnly: true, seamHit: true,
+      sub: '#7b7461', ink: '#3f3a2c',
+      seg: (hue, a, sel, val) => ({ fill: `oklch(${this.r(.83 + .12 * (val ?? .5) - .06 * a)} ${this.r(.015 + .1 * a)} ${hue})`, stroke: '#3f3a2c', strokeWidth: sel ? 1.8 : 0.7 }),
+      band: (hue, a, val) => `oklch(${this.r(.42 + .32 * (val ?? .5))} ${this.r(.07 + .09 * a)} ${hue})`,
+      txt: () => '#3f3a2c',
+      centerFill: '#f4f0e2', centerStroke: '#3f3a2c',
+      seam: { fill: '#f4f0e2', stroke: '#3f3a2c', txt: '#3f3a2c' },
+      faint: '#cfc7ae', ghost: '#cfc7ae', spoke: '#ddd6c0',
+      dot: (hue, a, rec) => `oklch(${this.r(.55 - .1 * a)} ${this.r(.06 + .05 * a)} ${hue} / ${this.r(.3 + .7 * rec)})`
+    },
+    '1d': {
+      lab: "'Instrument Serif', Georgia, serif", leafFs: a => 19 + 17 * a,
+      sub: '#777161', ink: '#22201b',
+      word: (hue, a) => `oklch(${this.r(.6 - .22 * a)} ${this.r(.07 + .1 * a)} ${hue})`,
+      centerFill: '#f7f5ef', centerStroke: '#c9c3b2',
+      seam: { fill: '#f7f5ef', stroke: '#a39c88', txt: '#4c463a' },
+      ghost: '#ddd8c9', spoke: '#e9e5d9', rays: '#e6e1d2',
+      dot: (hue, a, rec) => `oklch(${this.r(.55 - .15 * a)} ${this.r(.06 + .08 * a)} ${hue} / ${this.r(.3 + .7 * rec)})`
+    }
+  };
+
+  r(v) { return Math.round(v * 1000) / 1000; }
+  pt(r, d) { const t = d * Math.PI / 180; return [this.r(360 + r * Math.sin(t)), this.r(360 - r * Math.cos(t))]; }
+  seg(r0, r1, a0, a1) {
+    const [x0, y0] = this.pt(r1, a0), [x1, y1] = this.pt(r1, a1), [x2, y2] = this.pt(r0, a1), [x3, y3] = this.pt(r0, a0);
+    const la = (a1 - a0) > 180 ? 1 : 0;
+    return `M${x0} ${y0} A${r1} ${r1} 0 ${la} 1 ${x1} ${y1} L${x2} ${y2} A${r0} ${r0} 0 ${la} 0 ${x3} ${y3} Z`;
+  }
+  arc(r, a0, a1) {
+    const [x0, y0] = this.pt(r, a0), [x1, y1] = this.pt(r, a1);
+    return `M${x0} ${y0} A${r} ${r} 0 ${(a1 - a0) > 180 ? 1 : 0} 1 ${x1} ${y1}`;
+  }
+  arcRev(r, a0, a1) {
+    const [x0, y0] = this.pt(r, a1), [x1, y1] = this.pt(r, a0);
+    return `M${x0} ${y0} A${r} ${r} 0 ${(a1 - a0) > 180 ? 1 : 0} 0 ${x1} ${y1}`;
+  }
+
+  view(key) { return this.state.views[key] || (key === '3aB' ? { core: 'angry' } : {}); }
+  open(key, dir, coreId) {
+    const core = this.cores.find(c => c.id === coreId);
+    const seamHint = this.CFG[dir].seamHit ? 'The border between any two words holds their distinction — tap a boundary to read it.' : 'A ≠ marker is a seam worth reading — tap it.';
+    this.setState(s => ({ views: { ...s.views, [key]: { core: coreId } }, caps: { ...s.caps, [dir]: `${coreId} → ${core.leaves.length} finer words, laid beside their nearest neighbors. ${seamHint}` } }));
+  }
+  close(key, dir) { this.setState(s => ({ views: { ...s.views, [key]: {} }, caps: { ...s.caps, [dir]: this.DEFCAP } })); }
+  pick(key, dir, coreId, w) {
+    const cap = w === 'resentful' ? 'resentful — its full page is mocked on the right.' : `${w} — tapping opens its page: a plain definition, its nearest neighbors, and matched techniques.`;
+    this.setState(s => ({ views: { ...s.views, [key]: { ...s.views[key], sel: w } }, caps: { ...s.caps, [dir]: cap } }));
+  }
+  seamTap(dir, text) { this.setState(s => ({ caps: { ...s.caps, [dir]: text } })); }
+
+  cartoBg(C) {
+    const h = React.createElement, out = [];
+    [150, 195, 240, 285, 330].forEach(r => out.push(h('circle', { key: 'ct' + r, cx: 360, cy: 360, r, fill: 'none', stroke: C.faint, strokeWidth: .7, opacity: .55, style: { pointerEvents: 'none' } })));
+    for (let d = 0; d < 360; d += 15) {
+      const [x0, y0] = this.pt(348, d), [x1, y1] = this.pt(358, d);
+      out.push(h('line', { key: 'tk' + d, x1: x0, y1: y0, x2: x1, y2: y1, stroke: C.sub, strokeWidth: 1, opacity: .6 }));
+    }
+    return out;
+  }
+
+  wheel(key, dir) {
+    const h = React.createElement, C = this.CFG[dir], st = this.view(key);
+    const seams = this.props.seamMarkers ?? true;
+    const kids = [];
+    const core = st.core && this.cores.find(c => c.id === st.core);
+    if (dir === '1d') {
+      kids.push(h('circle', { key: 'oc', cx: 360, cy: 360, r: 350, fill: 'none', stroke: C.rays, strokeWidth: 1 }));
+      const bounds = core ? core.leaves.map((l, i) => i * 360 / core.leaves.length) : this.cores.map(c => c.a0);
+      bounds.forEach(d => {
+        const [x0, y0] = this.pt(120, d), [x1, y1] = this.pt(350, d);
+        kids.push(h('line', { key: 'ry' + d, x1: x0, y1: y0, x2: x1, y2: y1, stroke: C.rays, strokeWidth: 1 }));
+      });
+    }
+    if (!core) {
+      this.cores.forEach(c => {
+        if (dir === '1d') {
+          const [x, y] = this.pt(230, c.mid);
+          kids.push(h('path', { key: 'h' + c.id, d: this.seg(112, 348, c.a0, c.a1), fill: 'transparent', style: { cursor: 'pointer' }, onClick: () => this.open(key, dir, c.id) }));
+          kids.push(h('text', { key: 't' + c.id, x, y, textAnchor: 'middle', dominantBaseline: 'middle', fontFamily: C.lab, fontSize: this.r(34 + 30 * c.a), fill: C.word(c.hue, c.a), style: { cursor: 'pointer' }, onClick: () => this.open(key, dir, c.id) }, c.id));
+        } else {
+          const s = C.seg(c.hue, c.a, false, c.val);
+          kids.push(h('path', { key: c.id, d: this.seg(118, 338, c.a0, c.a1), fill: s.fill, stroke: s.stroke, strokeWidth: s.strokeWidth, style: { cursor: 'pointer', filter: s.glow }, onClick: () => this.open(key, dir, c.id) }));
+          if (C.band) kids.push(h('path', { key: 'b' + c.id, d: this.arc(348, c.a0 + 2, c.a1 - 2), fill: 'none', stroke: C.band(c.hue, c.a, c.val), strokeWidth: 7, strokeLinecap: 'round', style: { pointerEvents: 'none' } }));
+          if (C.curved) {
+            const rev = c.mid > 100 && c.mid < 260, rr = rev ? 222 : 240, pid = key + 'A' + c.id;
+            const arcLen = rr * c.span * Math.PI / 180;
+            const fs = Math.min(C.coreFs, this.r((arcLen - 10 - c.id.length * C.ls) / (c.id.length * 0.62)));
+            kids.push(h('path', { key: 'ap' + c.id, id: pid, d: rev ? this.arcRev(rr, c.a0, c.a1) : this.arc(rr, c.a0, c.a1), fill: 'none' }));
+            kids.push(h('text', { key: 't' + c.id, fontFamily: C.lab, fontWeight: 500, fontSize: fs, letterSpacing: C.ls, fill: C.txt(c.hue, c.a), style: { pointerEvents: 'none', textTransform: 'uppercase' } }, h('textPath', { href: '#' + pid, startOffset: '50%', textAnchor: 'middle' }, c.id)));
+          } else {
+            const [x, y] = this.pt(232, c.mid);
+            kids.push(h('text', { key: 't' + c.id, x, y, textAnchor: 'middle', dominantBaseline: 'middle', fontFamily: C.lab, fontWeight: 500, fontSize: C.coreFs, letterSpacing: C.ls || 0, fill: C.txt(c.hue, c.a), style: { pointerEvents: 'none', textTransform: C.upper ? 'uppercase' : 'none' } }, c.id));
+          }
+        }
+      });
+      kids.push(h('circle', { key: 'cc', cx: 360, cy: 360, r: dir === '1d' ? 96 : 104, fill: C.centerFill, stroke: C.centerStroke, strokeWidth: 1 }));
+      kids.push(h('text', { key: 'c1', x: 360, y: 352, textAnchor: 'middle', fontFamily: C.lab, fontSize: 20, fill: C.sub, fontStyle: dir === '1d' ? 'italic' : 'normal' }, 'tap the closest'));
+      kids.push(h('text', { key: 'c2', x: 360, y: 378, textAnchor: 'middle', fontFamily: C.lab, fontSize: 20, fill: C.sub, fontStyle: dir === '1d' ? 'italic' : 'normal' }, 'family'));
+    } else {
+      const n = core.leaves.length, sw = 360 / n;
+      core.leaves.forEach((lf, i) => {
+        const [w, a] = lf, a0 = i * sw, a1 = a0 + sw, mid = a0 + sw / 2, sel = st.sel === w;
+        if (dir === '1d') {
+          kids.push(h('path', { key: 'h' + w, d: this.seg(112, 348, a0, a1), fill: 'transparent', style: { cursor: 'pointer' }, onClick: () => this.pick(key, dir, core.id, w) }));
+        } else {
+          const s = C.seg(core.hue, a, sel, core.val);
+          kids.push(h('path', { key: w, d: this.seg(118, 336, a0, a1), fill: s.fill, stroke: s.stroke, strokeWidth: s.strokeWidth, style: { cursor: 'pointer', filter: s.glow }, onClick: () => this.pick(key, dir, core.id, w), onMouseEnter: C.fit ? () => this.seamTap(dir, w + ' — tap to open its page: definition, neighbors, matched techniques.') : undefined }));
+          if (C.band) kids.push(h('path', { key: 'b' + w, d: this.arc(348, a0 + 1.5, a1 - 1.5), fill: 'none', stroke: C.band(core.hue, a, core.val), strokeWidth: sel ? 9 : 6, style: { pointerEvents: 'none' } }));
+        }
+        const flip = mid > 180;
+        const p = this.pt(flip ? 328 : 138, mid), rot = flip ? mid + 90 : mid - 90;
+        const fill = dir === '1d' ? C.word(core.hue, a) : C.txt(core.hue, a);
+        const lfs = C.fit ? Math.min(C.leafFs(a), this.r((180 - w.length * 1.5) / (w.length * 0.62))) : C.leafFs(a);
+        kids.push(h('text', { key: 't' + w, transform: `translate(${p[0]} ${p[1]}) rotate(${this.r(rot)})`, textAnchor: 'start', dominantBaseline: 'middle', fontFamily: C.lab, fontSize: lfs, letterSpacing: C.ls ? 1.5 : 0, fill, textDecoration: sel && dir === '1d' ? 'underline' : 'none', fontWeight: sel && dir !== '1d' ? 600 : 400, style: { pointerEvents: 'none', textTransform: C.upper ? 'uppercase' : 'none' } }, w));
+        if (seams) {
+          const nx = core.leaves[(i + 1) % n][0];
+          const d = this.DIST[w + '|' + nx] || this.DIST[nx + '|' + w];
+          if (C.seamHit) {
+            const txt = d || `${w} | ${nx} — every boundary answers a tap; this distinction is queued for writing.`;
+            kids.push(h('path', { key: 's' + w, d: this.seg(150, 336, a1 - 4, a1 + 4), fill: 'transparent', style: { cursor: 'help' }, onClick: e => { e.stopPropagation(); this.seamTap(dir, txt); }, onMouseEnter: () => this.seamTap(dir, txt) }));
+          } else if (d) {
+            const [mx, my] = this.pt(dir === '1d' ? 300 : 343, a1 % 360);
+            kids.push(h('g', { key: 's' + w, style: { cursor: 'pointer' }, onClick: () => this.seamTap(dir, d), onMouseEnter: C.fit ? () => this.seamTap(dir, d) : undefined },
+              h('circle', { cx: mx, cy: my, r: 12, fill: C.seam.fill, stroke: C.seam.stroke, strokeWidth: 1.2 }),
+              h('text', { x: mx, y: my + 1, textAnchor: 'middle', dominantBaseline: 'middle', fontSize: 14, fontFamily: 'system-ui', fill: C.seam.txt }, '≠')));
+          }
+        }
+      });
+      kids.push(h('g', { key: 'ctr', style: { cursor: 'pointer' }, onClick: () => this.close(key, dir) },
+        h('circle', { cx: 360, cy: 360, r: 102, fill: C.centerFill, stroke: C.centerStroke, strokeWidth: 1 }),
+        h('text', { x: 360, y: 352, textAnchor: 'middle', fontFamily: C.lab, fontSize: 26, fill: dir === '1d' ? C.word(core.hue, core.a) : C.ink, style: { textTransform: C.upper ? 'uppercase' : 'none' } }, core.id),
+        h('text', { x: 360, y: 382, textAnchor: 'middle', fontFamily: C.lab, fontSize: 17, fill: C.sub }, '‹ back')));
+    }
+    return h('svg', { viewBox: '0 0 720 720', width: '100%', style: { display: 'block' } },
+      h('g', { key: key + ':' + (st.core || 'root'), style: { transformOrigin: '360px 360px', animation: 'omBloom .3s ease-out' } }, kids));
+  }
+
+  leafPos(word) {
+    for (const c of this.cores) {
+      const i = c.leaves.findIndex(l => l[0] === word);
+      if (i >= 0) return { c, ang: c.a0 + (i + .5) * c.span / c.leaves.length, a: c.leaves[i][1] };
+    }
+    return null;
+  }
+
+  constellation(dir) {
+    const h = React.createElement, C = this.CFG[dir];
+    const names = this.props.constellationNames ?? true;
+    const cx = 160, cy = 160;
+    const P = (r, d) => { const t = d * Math.PI / 180; return [this.r(cx + r * Math.sin(t)), this.r(cy - r * Math.cos(t))]; };
+    const kids = [h('circle', { key: 'g', cx, cy, r: 140, fill: 'none', stroke: C.ghost, strokeWidth: 1 })];
+    this.cores.forEach(c => {
+      const [x0, y0] = P(26, c.a0), [x1, y1] = P(140, c.a0);
+      kids.push(h('line', { key: 'sp' + c.id, x1: x0, y1: y0, x2: x1, y2: y1, stroke: C.spoke, strokeWidth: 1 }));
+    });
+    const land = [['overwhelmed', 0], ['anxious', 1], ['resentful', 3], ['relieved', 5], ['nostalgic', 8], ['lonely', 11], ['frustrated', 14], ['grateful', 18], ['discouraged', 21]];
+    land.forEach(([w, d]) => {
+      const pos = this.leafPos(w); if (!pos) return;
+      const rec = Math.max(0, 1 - d / 24), rr = 40 + 92 * pos.a;
+      const [x, y] = P(rr, pos.ang);
+      kids.push(h('circle', { key: 'd' + w, cx: x, cy: y, r: this.r(2.5 + 3.5 * rec), fill: C.dot(pos.c.hue, pos.a, rec), style: C.glowDot ? { filter: `drop-shadow(0 0 ${this.r(2 + 4 * rec)}px ${C.dot(pos.c.hue, pos.a, rec)})` } : null }));
+      if (names && (C.latestOnly ? d === 0 : d <= 3)) {
+        const left = x < cx;
+        kids.push(h('text', { key: 'l' + w, x: left ? x + 9 : x - 9, y: y + 3.5, textAnchor: left ? 'start' : 'end', fontFamily: C.lab, fontSize: 11.5, fill: C.sub }, w));
+      }
+    });
+    return h('svg', { viewBox: '0 0 320 320', width: '100%', style: { display: 'block' } }, kids);
+  }
+
+  renderVals() {
+    const vals = {};
+    ['1a', '1b', '1c', '1d'].forEach(dir => {
+      vals['w' + dir + 'D'] = this.wheel(dir + 'D', dir);
+      vals['w' + dir + 'M'] = this.wheel(dir + 'M', dir);
+      vals['c' + dir] = this.constellation(dir);
+      vals['cap' + dir] = this.state.caps[dir] || this.DEFCAP;
+    });
+    vals.w3aR = this.wheel('3aR', '3a');
+    vals.w3aB = this.wheel('3aB', '3a');
+    vals.c3c = this.constellation('3a');
+    vals.cap3a = this.state.caps['3a'] || this.DEFCAP;
+    vals.w2aD = this.wheel('2aD', '2a');
+    vals.w2aM = this.wheel('2aM', '2a');
+    vals.w2cM = this.wheel('2cM', '2a');
+    vals.cap2a = this.state.caps['2a'] || this.DEFCAP;
+    vals.taxonomy = this.cores.map(c => ({ label: c.id, count: c.leaves.length, words: c.leaves.map(l => l[0]).join(' · ') }));
+    return vals;
+  }
+}
+</script>
+</body>
+</html>
