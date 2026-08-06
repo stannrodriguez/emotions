@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "62 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "All 63 emotion pages have authored leaf content.",
     "wordCount": 63
   },
   "families": [
@@ -2161,11 +2161,36 @@
         {
           "id": "wary",
           "arousal": 0.45,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · cautious",
+          "definition": "Cautious alertness after noticing a possible sign of risk. Wariness slows approach and gathers more evidence without yet concluding that danger is certain.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "helpless",
+              "contrast": "A perceived lack of effective options or influence. Wary centers on measured caution while risk remains possible."
+            },
+            {
+              "word": "panicked",
+              "contrast": "An emergency response to danger that feels immediate. Wary centers on measured caution while risk remains possible."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Settle the body first",
+              "body": "Lengthen the exhale and press your feet or back into a stable surface for one minute. Wary centers on measured caution while risk remains possible; a steadier body can evaluate it more accurately.",
+              "whereItBreaks": "regulation is not a substitute for leaving immediate danger. Safety comes first."
+            },
+            {
+              "name": "Size the threat",
+              "body": "Write three lines: what you know, what you are predicting, and what would tell you the risk is increasing. This turns a cloud of fear into conditions you can monitor.",
+              "whereItBreaks": "risk analysis can become reassurance-seeking. Stop when no new evidence is being added."
+            },
+            {
+              "name": "Take the smallest safe step",
+              "body": "Choose one action that increases safety or information without requiring certainty: ask, check, prepare, practice, or get support. Then reassess from the new position.",
+              "whereItBreaks": "small steps are not enough when delay increases danger. Use urgent help or a full exit when the situation requires it."
+            }
+          ]
         }
       ]
     }
