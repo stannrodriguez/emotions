@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "17 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "18 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -531,11 +531,36 @@
         {
           "id": "grateful",
           "arousal": 0.4,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "pleasant · warm",
+          "definition": "Recognition that something valuable has been received and was not entirely self-made. Gratitude turns attention toward the benefit, the giver, or the conditions that allowed it.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "hopeful",
+              "contrast": "Desire connected to a credible possibility. Grateful centers on recognition of a valued benefit received."
+            },
+            {
+              "word": "affectionate",
+              "contrast": "Warmth that moves toward care and closeness. Grateful centers on recognition of a valued benefit received."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Stay with the signal",
+              "body": "Notice how grateful feels in the body for twenty uninterrupted seconds before reaching for a screen, explanation, or next task. Attention helps a positive state register instead of passing unnoticed.",
+              "whereItBreaks": "trying to hold the feeling can turn savoring into pressure. Let it change when it changes."
+            },
+            {
+              "name": "Name the source",
+              "body": "Finish the sentence “This feeling came from ___.” Be specific about the person, effort, condition, or moment so you can recognize what supports it.",
+              "whereItBreaks": "do not turn good fortune into a demand to optimize every future moment. Recognition is enough."
+            },
+            {
+              "name": "Let it move",
+              "body": "Choose one proportionate expression: tell someone, mark the moment, offer thanks, or repeat the nourishing condition. Positive emotion becomes more usable when it has a clean outlet.",
+              "whereItBreaks": "sharing can become performance if you need a particular reaction. Choose an expression that remains worthwhile on its own."
+            }
+          ]
         },
         {
           "id": "affectionate",
