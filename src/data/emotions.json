@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "33 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "34 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1083,11 +1083,36 @@
         {
           "id": "guilty",
           "arousal": 0.5,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · pressing",
+          "definition": "Discomfort after believing you violated a value, duty, or commitment through something you did or failed to do. Guilt focuses on the act and can motivate acknowledgment and repair.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "regretful",
+              "contrast": "Pain about your own choice or omission. Guilty centers on a specific action that appears to violate your values."
+            },
+            {
+              "word": "ashamed",
+              "contrast": "A judgment that condemns the whole self. Guilty centers on a specific action that appears to violate your values."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice guilty without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel guilty because I wanted or valued ___.” Guilty centers on a specific action that appears to violate your values; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         },
         {
           "id": "ashamed",
