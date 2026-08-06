@@ -3,7 +3,7 @@
  *
  * Serves the repo and drives it in Chromium, checking the things that only
  * exist once the app is rendered: the seam hit rule, the 12px floor, keyboard
- * navigation, deep links, the bloom animation, both queued states, and a pixel
+ * navigation, deep links, the bloom animation, authored and empty states, and a pixel
  * diff of the leaf page against the design file's own 3b markup.
  *
  *   npm run verify:ui
@@ -51,6 +51,10 @@ const extras = new Map();
 
 const server = createServer(async (req, res) => {
   const path = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+  if (path === '/favicon.ico') {
+    res.writeHead(204).end();
+    return;
+  }
   if (extras.has(path)) {
     res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
     res.end(extras.get(path));
@@ -95,7 +99,11 @@ const ok = (label, cond, detail = '') => {
 };
 const heading = (t) => console.log(`\n${t}\n${'-'.repeat(t.length)}`);
 
-const browser = await chromium.launch();
+const browser = await chromium.launch(
+  process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE
+    ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE }
+    : undefined
+);
 const newPage = async (options = {}) => {
   const page = await browser.newPage({ viewport: { width: 1100, height: 950 }, ...options });
   page.on('pageerror', (e) => errors.push(e.message));
@@ -355,9 +363,9 @@ heading('6. Label floor and responsiveness');
   ok('no label anywhere renders below 12px', worst >= 11.99, `smallest ${worst.toFixed(2)}px`);
 }
 
-/* ------------------------------------------------------ 7. queued states --- */
+/* ------------------------------------------- 7. authored + empty states --- */
 
-heading('7. Queued states — nothing is invented');
+heading('7. Authored leaf and first-run empty states');
 {
   const page = await newPage({ viewport: { width: 460, height: 1000 } });
   await page.goto(`${base}/#/angry/furious`, { waitUntil: 'networkidle' });
@@ -366,16 +374,16 @@ heading('7. Queued states — nothing is invented');
     crumb: document.querySelector('.leaf__crumb').textContent,
     title: document.querySelector('.leaf__title').textContent,
     coords: document.querySelector('.leaf__coords').textContent,
-    queued: document.querySelector('.leaf__queued')?.textContent,
+    definition: document.querySelector('.leaf__definition')?.textContent,
     note: !!document.querySelector('.leaf__labeling-note'),
     nearby: !!document.querySelector('.leaf__section--nearby'),
     helps: !!document.querySelector('.leaf__section--helps'),
     keepEnabled: !document.querySelector('.leaf__keep').disabled,
   }));
-  ok('unwritten leaf keeps its chrome, breadcrumb and H2', leaf.crumb === 'ANGRY / FURIOUS' && leaf.title === 'Furious');
-  ok('one italic line where the definition would sit', leaf.queued === "This word's page is queued for writing.");
-  ok('coordinates slot stays empty', leaf.coords === '', JSON.stringify(leaf.coords));
-  ok('no labeling note, no NEARBY, no WHAT HELPS', !leaf.note && !leaf.nearby && !leaf.helps);
+  ok('authored leaf keeps its chrome, breadcrumb and H2', leaf.crumb === 'ANGRY / FURIOUS' && leaf.title === 'Furious');
+  ok('authored definition is rendered', leaf.definition?.startsWith('Very high-intensity anger'));
+  ok('authored coordinates are rendered', leaf.coords === 'unpleasant · blazing', JSON.stringify(leaf.coords));
+  ok('labeling note, NEARBY, and WHAT HELPS are rendered', leaf.note && leaf.nearby && leaf.helps);
   ok('+ KEEP THIS WORD stays enabled', leaf.keepEnabled);
 
   await page.click('.leaf__keep');
@@ -385,7 +393,7 @@ heading('7. Queued states — nothing is invented');
     landings: JSON.parse(localStorage.getItem('atlas.landings') || '[]'),
   }));
   ok('keeping writes the lexicon entry and the landing', stored.entry.word === 'furious' && stored.landings.some((l) => l.word === 'furious'));
-  ok('and stores no fabricated definition', stored.entry.definition === undefined);
+  ok('and stores the authored definition', stored.entry.definition?.startsWith('Very high-intensity anger'));
 
   await page.goto(`${base}/#/lexicon`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(300);
@@ -393,7 +401,7 @@ heading('7. Queued states — nothing is invented');
     const r = [...document.querySelectorAll('.lexicon__row')].find((n) => n.textContent.includes('furious'));
     return { queued: r.querySelector('.lexicon__queued')?.textContent, def: r.querySelector('.lexicon__definition')?.textContent };
   });
-  ok('its lexicon row says the page is queued', row.queued === 'page queued for writing.' && !row.def);
+  ok('its lexicon row carries the authored definition', !row.queued && row.def?.startsWith('Very high-intensity anger'));
 
   await page.evaluate(() => { localStorage.setItem('atlas.landings', '[]'); localStorage.setItem('atlas.lexicon', '[]'); });
   await page.goto(`${base}/#/constellation`, { waitUntil: 'networkidle' });
