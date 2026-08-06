@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "28 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "29 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -913,11 +913,36 @@
         {
           "id": "hurt",
           "arousal": 0.55,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · aching",
+          "definition": "Emotional pain after care, trust, dignity, or belonging has been injured. Hurt often sits beneath anger and points more directly to what mattered in the encounter.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "lonely",
+              "contrast": "Too little of the connection that actually feels mutual. Hurt centers on pain where something valued was touched or damaged."
+            },
+            {
+              "word": "disappointed",
+              "contrast": "A particular outcome falling short of hope. Hurt centers on pain where something valued was touched or damaged."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice hurt without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel hurt because I wanted or valued ___.” Hurt centers on pain where something valued was touched or damaged; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         },
         {
           "id": "disappointed",
