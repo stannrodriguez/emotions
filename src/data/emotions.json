@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "26 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "27 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -845,11 +845,36 @@
         {
           "id": "homesick",
           "arousal": 0.35,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · yearning",
+          "definition": "Longing for the people, place, routines, and familiarity that make somewhere feel like home. Homesickness is less about geography than about being separated from a known form of belonging.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "melancholy",
+              "contrast": "Diffuse sadness that lingers without one clear event. Homesick centers on separation from the familiar shape of belonging."
+            },
+            {
+              "word": "lonely",
+              "contrast": "Too little of the connection that actually feels mutual. Homesick centers on separation from the familiar shape of belonging."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice homesick without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel homesick because I wanted or valued ___.” Homesick centers on separation from the familiar shape of belonging; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         },
         {
           "id": "lonely",
