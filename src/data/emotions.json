@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "39 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "40 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1295,11 +1295,36 @@
         {
           "id": "appalled",
           "arousal": 0.75,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · aghast",
+          "definition": "Moral shock and disgust at a serious violation of what should be acceptable. Being appalled says not only “I dislike this,” but “this should not have happened.”",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "revolted",
+              "contrast": "An urgent need to reject or get away from contact. Appalled centers on moral shock at an unacceptable violation."
+            },
+            {
+              "word": "scornful",
+              "contrast": "Contempt made visible through ridicule. Appalled centers on moral shock at an unacceptable violation."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Create clean distance",
+              "body": "Reduce contact long enough to let the first wave of the feeling settle: step back, close the tab, ventilate, or pause the conversation. Distance makes choice possible when you feel appalled.",
+              "whereItBreaks": "avoidance can teach the system that every discomfort is dangerous. Return when contact is safe and relevant."
+            },
+            {
+              "name": "Locate the boundary",
+              "body": "Finish “This feels unacceptable because ___.” Appalled centers on moral shock at an unacceptable violation; identify the concrete behavior, substance, or value violation rather than condemning a whole person.",
+              "whereItBreaks": "a boundary stated as a character judgment invites contempt instead of useful protection. Keep it behavioral."
+            },
+            {
+              "name": "Check the verdict",
+              "body": "Separate what you directly observed from what you inferred about contamination, intent, or worth. Keep the protective signal while testing the conclusion it produced.",
+              "whereItBreaks": "analysis is not required when the evidence already shows a real safety or consent violation. Act on the boundary."
+            }
+          ]
         },
         {
           "id": "scornful",
