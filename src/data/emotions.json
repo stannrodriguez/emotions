@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "58 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "59 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -2025,11 +2025,36 @@
         {
           "id": "insecure",
           "arousal": 0.45,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · unsettled",
+          "definition": "Uncertainty about your adequacy, stability, or place in a relationship or situation. Insecurity looks outward for confirmation because the internal sense of safety does not feel reliable.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "suspicious",
+              "contrast": "Watchfulness for deception or hidden harm. Insecure centers on uncertainty about adequacy, stability, or belonging."
+            },
+            {
+              "word": "self-conscious",
+              "contrast": "Fearful self-monitoring under imagined scrutiny. Insecure centers on uncertainty about adequacy, stability, or belonging."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Settle the body first",
+              "body": "Lengthen the exhale and press your feet or back into a stable surface for one minute. Insecure centers on uncertainty about adequacy, stability, or belonging; a steadier body can evaluate it more accurately.",
+              "whereItBreaks": "regulation is not a substitute for leaving immediate danger. Safety comes first."
+            },
+            {
+              "name": "Size the threat",
+              "body": "Write three lines: what you know, what you are predicting, and what would tell you the risk is increasing. This turns a cloud of fear into conditions you can monitor.",
+              "whereItBreaks": "risk analysis can become reassurance-seeking. Stop when no new evidence is being added."
+            },
+            {
+              "name": "Take the smallest safe step",
+              "body": "Choose one action that increases safety or information without requiring certainty: ask, check, prepare, practice, or get support. Then reassess from the new position.",
+              "whereItBreaks": "small steps are not enough when delay increases danger. Use urgent help or a full exit when the situation requires it."
+            }
+          ]
         },
         {
           "id": "self-conscious",
