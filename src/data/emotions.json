@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "61 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "62 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -2127,11 +2127,36 @@
         {
           "id": "helpless",
           "arousal": 0.3,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · powerless",
+          "definition": "The felt absence of influence, escape, or effective support in the face of a problem. Helplessness can be accurate in one part of a situation while obscuring smaller forms of choice elsewhere.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "vulnerable",
+              "contrast": "Being open to loss because something matters. Helpless centers on a perceived lack of effective options or influence."
+            },
+            {
+              "word": "wary",
+              "contrast": "Measured caution while risk remains possible. Helpless centers on a perceived lack of effective options or influence."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Settle the body first",
+              "body": "Lengthen the exhale and press your feet or back into a stable surface for one minute. Helpless centers on a perceived lack of effective options or influence; a steadier body can evaluate it more accurately.",
+              "whereItBreaks": "regulation is not a substitute for leaving immediate danger. Safety comes first."
+            },
+            {
+              "name": "Size the threat",
+              "body": "Write three lines: what you know, what you are predicting, and what would tell you the risk is increasing. This turns a cloud of fear into conditions you can monitor.",
+              "whereItBreaks": "risk analysis can become reassurance-seeking. Stop when no new evidence is being added."
+            },
+            {
+              "name": "Take the smallest safe step",
+              "body": "Choose one action that increases safety or information without requiring certainty: ask, check, prepare, practice, or get support. Then reassess from the new position.",
+              "whereItBreaks": "small steps are not enough when delay increases danger. Use urgent help or a full exit when the situation requires it."
+            }
+          ]
         },
         {
           "id": "wary",
