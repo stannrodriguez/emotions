@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "10 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "11 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -285,11 +285,36 @@
         {
           "id": "amazed",
           "arousal": 0.75,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "pleasant · expansive",
+          "definition": "Delighted surprise when reality exceeds what you thought likely or possible. Attention widens around the unexpected scale, skill, beauty, or good fortune in front of you.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "intrigued",
+              "contrast": "Sustained attention to a promising mystery. Amazed centers on expectation being exceeded in a welcome way."
+            },
+            {
+              "word": "awed",
+              "contrast": "Wonder that changes your sense of scale. Amazed centers on expectation being exceeded in a welcome way."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Orient to the present",
+              "body": "Put both feet down and name three facts that are true now. Amazed centers on expectation being exceeded in a welcome way; present facts give the nervous system a stable frame before interpretation takes over.",
+              "whereItBreaks": "facts do not settle a body that is still in danger. Move to safety first, then orient."
+            },
+            {
+              "name": "Name what changed",
+              "body": "Complete two lines: “I expected ___” and “instead ___.” The gap shows exactly what amazed is asking your mind to update.",
+              "whereItBreaks": "forcing an explanation too quickly replaces uncertainty with a convenient story. Leave the blank open when you do not know."
+            },
+            {
+              "name": "Choose one question",
+              "body": "Ask the smallest question that would make the situation more legible, then seek only that answer. One good question turns surprise into information without demanding total certainty.",
+              "whereItBreaks": "some events need time, not investigation. If more information is flooding you, pause the search."
+            }
+          ]
         },
         {
           "id": "awed",
