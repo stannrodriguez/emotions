@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "48 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "49 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1643,11 +1643,36 @@
         {
           "id": "exasperated",
           "arousal": 0.75,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · frayed",
+          "definition": "Worn-out anger after repeated friction, failed explanations, or problems that should have been resolved already. Exasperation carries the fatigue of having tried before.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "indignant",
+              "contrast": "Mobilizing anger at a violation of principle. Exasperated centers on anger exhausted by repetition and failed attempts."
+            },
+            {
+              "word": "frustrated",
+              "contrast": "Effort meeting an obstacle to a valued goal. Exasperated centers on anger exhausted by repetition and failed attempts."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Lower the heat before acting",
+              "body": "Delay the message or decision until your body is below the peak of the feeling. Use brisk movement, slower exhalations, or cold water, then return to what made you exasperated.",
+              "whereItBreaks": "calming down must not become abandoning a legitimate claim. Set a time to return to it."
+            },
+            {
+              "name": "Name the blocked value",
+              "body": "Complete “I am exasperated because ___ is blocking or violating ___.” Exasperated centers on anger exhausted by repetition and failed attempts; precision separates the value from the first impulse.",
+              "whereItBreaks": "a value is not proof that your preferred remedy is fair. Check impact and constraints before acting."
+            },
+            {
+              "name": "Make one clean move",
+              "body": "Choose the smallest action that protects the value: a request, boundary, consequence, repair, or exit. State it without a case file or attack on character.",
+              "whereItBreaks": "some situations are unsafe or structurally fixed. When direct action carries real risk, seek support and plan before confronting."
+            }
+          ]
         },
         {
           "id": "frustrated",
