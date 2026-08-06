@@ -15,7 +15,7 @@
           "arousal": 0.95,
           "coordinates": "mixed · instant",
           "definition": "A reflexive jolt when something changes without warning. The body responds before the mind has decided whether the interruption is dangerous, welcome, or harmless.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "awed",
@@ -49,7 +49,7 @@
           "arousal": 0.9,
           "coordinates": "unpleasant · shattering",
           "definition": "A powerful break in what you believed was possible or true. Shock can feel intensely emotional, strangely numb, or both while the mind struggles to absorb what happened.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "startled",
@@ -83,7 +83,7 @@
           "arousal": 0.8,
           "coordinates": "mixed · suspended",
           "definition": "A temporary inability to think, speak, or respond after something unusually powerful. Attention stalls because the event has exceeded your usual frame for understanding it.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "shocked",
@@ -117,7 +117,7 @@
           "arousal": 0.7,
           "coordinates": "unpleasant · unsteady",
           "definition": "The loss of a reliable sense of where you are, what is happening, or how to proceed. Familiar cues stop organizing experience, leaving you without your usual bearings.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "stunned",
@@ -151,7 +151,7 @@
           "arousal": 0.55,
           "coordinates": "unpleasant · foggy",
           "definition": "Difficulty forming a coherent understanding because information is missing, conflicting, or too complex. You can see pieces of the situation, but they do not yet fit together.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "disoriented",
@@ -185,7 +185,7 @@
           "arousal": 0.6,
           "coordinates": "unpleasant · adrift",
           "definition": "Confusion so complete that you cannot find a sensible place to begin. The situation feels not merely unclear but outside the rules you expected it to follow.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "confused",
@@ -219,7 +219,7 @@
           "arousal": 0.5,
           "coordinates": "pleasant · searching",
           "definition": "An open pull toward what you do not yet know. Curiosity treats uncertainty as an invitation to look closer, ask, test, or learn rather than as a problem to close quickly.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "bewildered",
@@ -253,7 +253,7 @@
           "arousal": 0.55,
           "coordinates": "pleasant · absorbed",
           "definition": "Curiosity captured by something that hints at hidden depth, pattern, or significance. It holds attention because there appears to be more here than the surface reveals.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "curious",
@@ -287,7 +287,7 @@
           "arousal": 0.75,
           "coordinates": "pleasant · expansive",
           "definition": "Delighted surprise when reality exceeds what you thought likely or possible. Attention widens around the unexpected scale, skill, beauty, or good fortune in front of you.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "intrigued",
@@ -321,7 +321,7 @@
           "arousal": 0.65,
           "coordinates": "pleasant · vast",
           "definition": "Wonder in the presence of something experienced as vast, powerful, or deeply meaningful. Awe can make the self feel smaller without making it feel diminished.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "amazed",
@@ -363,7 +363,7 @@
           "arousal": 0.9,
           "coordinates": "pleasant · electric",
           "definition": "High-energy anticipation of something wanted or newly possible. The body mobilizes toward the future, making attention quick, expansive, and ready to act.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "serene",
@@ -397,7 +397,7 @@
           "arousal": 0.8,
           "coordinates": "pleasant · radiant",
           "definition": "A bright, full-bodied sense that something is deeply good right now. Joy is more absorbing than ordinary pleasure and often creates an impulse to move, express, or share.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "excited",
@@ -431,7 +431,7 @@
           "arousal": 0.6,
           "coordinates": "pleasant · playful",
           "definition": "Light pleasure sparked by incongruity, wit, or harmless absurdity. Amusement loosens seriousness for a moment and invites laughter, play, or a fresh angle.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "joyful",
@@ -465,7 +465,7 @@
           "arousal": 0.6,
           "coordinates": "pleasant · upright",
           "definition": "Satisfaction in an achievement, effort, or way of acting that reflects what you value. Healthy pride says, “I helped make this happen,” without needing anyone else to be smaller.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "amused",
@@ -499,7 +499,7 @@
           "arousal": 0.55,
           "coordinates": "pleasant · rising",
           "definition": "A felt sense that a wanted future remains possible, even though it is not guaranteed. Hope joins desire to a believable path, however narrow or unfinished.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "proud",
@@ -533,7 +533,7 @@
           "arousal": 0.4,
           "coordinates": "pleasant · warm",
           "definition": "Recognition that something valuable has been received and was not entirely self-made. Gratitude turns attention toward the benefit, the giver, or the conditions that allowed it.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "hopeful",
@@ -567,7 +567,7 @@
           "arousal": 0.45,
           "coordinates": "pleasant · tender",
           "definition": "Warmth toward someone or something that matters, paired with an impulse for closeness, care, or gentle expression. Affection can be quiet and steady without being less real.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "grateful",
@@ -601,7 +601,7 @@
           "arousal": 0.5,
           "coordinates": "pleasant · stirring",
           "definition": "A deep emotional stirring when something touches a central value, bond, or truth. Being moved often mixes feelings—tenderness, sadness, gratitude, or awe—without reducing to one of them.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "affectionate",
@@ -635,7 +635,7 @@
           "arousal": 0.25,
           "coordinates": "pleasant · settled",
           "definition": "A quiet sense of enoughness in the present moment. Contentment does not require everything to be ideal; it is the temporary absence of a demand that now must be different.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "moved",
@@ -669,7 +669,7 @@
           "arousal": 0.35,
           "coordinates": "pleasant · releasing",
           "definition": "The easing that follows when a threat, burden, or uncertainty diminishes. Relief is felt in the contrast: the body stops preparing for what it no longer has to carry.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "content",
@@ -703,7 +703,7 @@
           "arousal": 0.12,
           "coordinates": "pleasant · still",
           "definition": "Deep steadiness with little internal friction. Serenity is not numbness or perfect circumstances; it is a spacious calm that can remain present while life continues around it.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "relieved",
@@ -745,7 +745,7 @@
           "arousal": 0.3,
           "coordinates": "unpleasant · bittersweet",
           "definition": "A bittersweet pull toward a past that felt meaningful, safe, or alive. Nostalgia revisits what is gone while preserving the warmth of having had it.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "ashamed",
@@ -779,7 +779,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · tidal",
           "definition": "The mind and body adapting to a loss that cannot simply be reversed. Grief reaches beyond sadness: it reorganizes habits, identity, expectation, and the shape of daily life.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "nostalgic",
@@ -813,7 +813,7 @@
           "arousal": 0.25,
           "coordinates": "unpleasant · low",
           "definition": "A quiet, lingering sadness that may not have one clear cause. Melancholy colors experience with loss or distance while leaving room for reflection and even beauty.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "grieving",
@@ -847,7 +847,7 @@
           "arousal": 0.35,
           "coordinates": "unpleasant · yearning",
           "definition": "Longing for the people, place, routines, and familiarity that make somewhere feel like home. Homesickness is less about geography than about being separated from a known form of belonging.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "melancholy",
@@ -881,7 +881,7 @@
           "arousal": 0.35,
           "coordinates": "unpleasant · hollow",
           "definition": "The painful gap between the connection you want and the connection you experience. Loneliness can occur alone or among people when contact lacks recognition, safety, or mutuality.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "homesick",
@@ -915,7 +915,7 @@
           "arousal": 0.55,
           "coordinates": "unpleasant · aching",
           "definition": "Emotional pain after care, trust, dignity, or belonging has been injured. Hurt often sits beneath anger and points more directly to what mattered in the encounter.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "lonely",
@@ -949,7 +949,7 @@
           "arousal": 0.45,
           "coordinates": "unpleasant · sinking",
           "definition": "Sadness when an outcome, person, or experience falls short of what you reasonably hoped for. Disappointment revises an expectation; it does not automatically decide what happens next.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "hurt",
@@ -983,7 +983,7 @@
           "arousal": 0.35,
           "coordinates": "unpleasant · draining",
           "definition": "A loss of confidence or motivation after difficulty, delay, or repeated setbacks. Discouragement questions whether continued effort will matter, even when the goal still does.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "disappointed",
@@ -1017,7 +1017,7 @@
           "arousal": 0.2,
           "coordinates": "unpleasant · extinguished",
           "definition": "The felt conclusion that a wanted future is no longer reachable. Hopelessness narrows attention so thoroughly that alternatives, support, and change can become difficult to perceive.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "discouraged",
@@ -1051,7 +1051,7 @@
           "arousal": 0.4,
           "coordinates": "unpleasant · backward-looking",
           "definition": "Sorrow about a choice or omission you now wish had been different. Regret compares what happened with an imagined alternative and can point toward repair, learning, or mourning.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "hopeless",
@@ -1085,7 +1085,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · pressing",
           "definition": "Discomfort after believing you violated a value, duty, or commitment through something you did or failed to do. Guilt focuses on the act and can motivate acknowledgment and repair.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "regretful",
@@ -1119,7 +1119,7 @@
           "arousal": 0.45,
           "coordinates": "unpleasant · exposed",
           "definition": "The painful sense that a flaw or failure reveals something unacceptable about who you are. Shame turns judgment from an act toward the whole self and creates an urge to hide.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "guilty",
@@ -1161,7 +1161,7 @@
           "arousal": 0.35,
           "coordinates": "unpleasant · estranged",
           "definition": "A felt separation from people, a community, your work, or even your own values. What should provide belonging or meaning instead feels foreign, inaccessible, or no longer yours.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "disdainful",
@@ -1195,7 +1195,7 @@
           "arousal": 0.4,
           "coordinates": "unpleasant · recoiling",
           "definition": "A strong inclination to avoid a person, object, or experience before contact goes further. Aversion is the system’s early “away” signal; it may reflect wisdom, learning, taste, or bias.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "alienated",
@@ -1229,7 +1229,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · queasy",
           "definition": "Bodily sensitivity to things such as blood, injury, contamination, or invasive detail. Squeamishness is immediate and physical, even when you know the situation is safe.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "averse",
@@ -1263,7 +1263,7 @@
           "arousal": 0.7,
           "coordinates": "unpleasant · forceful",
           "definition": "Intense rejection after encountering something experienced as contaminating, degrading, or profoundly offensive. Revulsion creates a strong urge to expel, escape, or sever contact.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "squeamish",
@@ -1297,7 +1297,7 @@
           "arousal": 0.75,
           "coordinates": "unpleasant · aghast",
           "definition": "Moral shock and disgust at a serious violation of what should be acceptable. Being appalled says not only “I dislike this,” but “this should not have happened.”",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "revolted",
@@ -1331,7 +1331,7 @@
           "arousal": 0.6,
           "coordinates": "unpleasant · cutting",
           "definition": "Contempt expressed through open mockery or derision. Scorn protects status by treating its target as ridiculous and unworthy of serious engagement.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "appalled",
@@ -1365,7 +1365,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · cool",
           "definition": "A cool, distancing judgment that someone or something is beneath consideration or respect. Disdain withdraws engagement rather than spending energy on direct attack.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "scornful",
@@ -1407,7 +1407,7 @@
           "arousal": 0.55,
           "coordinates": "unpleasant · hard",
           "definition": "Anger and disgust organized around the judgment that someone is beneath respect. Contempt attacks standing and character, making curiosity, repair, and equal dialogue difficult.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "furious",
@@ -1441,7 +1441,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · coveting",
           "definition": "Pain at seeing someone else possess an advantage, quality, or experience you want. Envy points toward an unmet desire, but can turn corrosive when it requires the other person to lose it.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "contemptuous",
@@ -1475,7 +1475,7 @@
           "arousal": 0.6,
           "coordinates": "unpleasant · guarding",
           "definition": "Alarm that a valued bond, position, or source of attention may be taken by a rival. Jealousy protects something you believe you already have and fear losing.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "envious",
@@ -1509,7 +1509,7 @@
           "arousal": 0.65,
           "coordinates": "unpleasant · ruptured",
           "definition": "Anger and hurt after discovering that someone trusted violated an expectation central to the relationship. Betrayal changes not only the present fact but the meaning of earlier trust.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "jealous",
@@ -1543,7 +1543,7 @@
           "arousal": 0.45,
           "coordinates": "unpleasant · hardened",
           "definition": "Resentment that has stopped expecting repair and spread into a durable outlook. Bitterness protects against fresh disappointment by treating unfairness as the settled nature of things.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "betrayed",
@@ -1577,7 +1577,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · simmering",
           "definition": "Anger that has settled in around a specific unfairness — usually one you keep re-encountering, and often aimed at someone you haven't confronted. It accumulates: each new instance lands on the pile of the old ones.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "bitter",
@@ -1611,7 +1611,7 @@
           "arousal": 0.7,
           "coordinates": "unpleasant · charged",
           "definition": "Anger at an unfairness or violation that offends a principle, often with an impulse to speak publicly or defend someone. Indignation says, “This is wrong,” not only, “This hurt me.”",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "resentful",
@@ -1645,7 +1645,7 @@
           "arousal": 0.75,
           "coordinates": "unpleasant · frayed",
           "definition": "Worn-out anger after repeated friction, failed explanations, or problems that should have been resolved already. Exasperation carries the fatigue of having tried before.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "indignant",
@@ -1679,7 +1679,7 @@
           "arousal": 0.7,
           "coordinates": "unpleasant · blocked",
           "definition": "Agitated tension when progress toward a goal is obstructed. Frustration mobilizes effort, but if the obstacle persists it can spill into blame or a broader sense of defeat.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "exasperated",
@@ -1713,7 +1713,7 @@
           "arousal": 0.65,
           "coordinates": "unpleasant · restless",
           "definition": "Tension when events, people, or results move more slowly than you want. Impatience treats delay as costly and presses for movement, sometimes faster than the situation can safely support.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "frustrated",
@@ -1747,7 +1747,7 @@
           "arousal": 0.6,
           "coordinates": "unpleasant · prickly",
           "definition": "Low-grade anger at an intrusion, friction, or repeated minor offense. Irritation is easy to dismiss because it is small, but often signals a boundary or need being rubbed raw.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "impatient",
@@ -1781,7 +1781,7 @@
           "arousal": 0.97,
           "coordinates": "unpleasant · blazing",
           "definition": "Very high-intensity anger that mobilizes the body for immediate action. Fury narrows attention around the offense and can make force feel necessary before judgment has caught up.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "irritated",
@@ -1823,7 +1823,7 @@
           "arousal": 0.97,
           "coordinates": "unpleasant · surging",
           "definition": "An acute surge of fear in which danger feels immediate and escape feels urgent. The body accelerates before deliberate thought can assess the threat, producing a powerful fight, flight, or freeze response.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "wary",
@@ -1857,7 +1857,7 @@
           "arousal": 0.85,
           "coordinates": "unpleasant · flooded",
           "definition": "The sense that demands, information, or feeling exceed your present capacity to process them. Everything competes for attention at once, making priority and next steps hard to see.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "panicked",
@@ -1891,7 +1891,7 @@
           "arousal": 0.6,
           "coordinates": "unpleasant · looming",
           "definition": "Fear directed toward a future event you expect to be painful, difficult, or unavoidable. Dread begins the experience early, repeatedly rehearsing what has not happened yet.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "overwhelmed",
@@ -1925,7 +1925,7 @@
           "arousal": 0.75,
           "coordinates": "unpleasant · bracing",
           "definition": "The body and mind preparing for a threat that is uncertain, diffuse, or not yet fully named. Anxiety keeps scanning for what might go wrong, even without one solvable problem in view.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "dreading",
@@ -1959,7 +1959,7 @@
           "arousal": 0.55,
           "coordinates": "unpleasant · looping",
           "definition": "Repetitive thought about a specific possible problem and how it might turn out. Worry tries to solve uncertainty in words, but often circles after useful planning has ended.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "anxious",
@@ -1993,7 +1993,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · scanning",
           "definition": "Alertness to the possibility that motives, appearances, or information cannot be trusted. Suspicion looks for concealed risk; it can protect you or overread ambiguity as evidence.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "worried",
@@ -2027,7 +2027,7 @@
           "arousal": 0.45,
           "coordinates": "unpleasant · unsettled",
           "definition": "Uncertainty about your adequacy, stability, or place in a relationship or situation. Insecurity looks outward for confirmation because the internal sense of safety does not feel reliable.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "suspicious",
@@ -2061,7 +2061,7 @@
           "arousal": 0.5,
           "coordinates": "unpleasant · exposed",
           "definition": "Heightened awareness of yourself as if through other people’s eyes. Attention turns inward toward how you look, sound, or perform, making ordinary action feel observed and evaluative.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "insecure",
@@ -2095,7 +2095,7 @@
           "arousal": 0.4,
           "coordinates": "unpleasant · open",
           "definition": "Awareness that something important can be hurt, lost, rejected, or exposed. Vulnerability is not the same as danger; it is the condition of caring without complete control over the outcome.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "self-conscious",
@@ -2129,7 +2129,7 @@
           "arousal": 0.3,
           "coordinates": "unpleasant · powerless",
           "definition": "The felt absence of influence, escape, or effective support in the face of a problem. Helplessness can be accurate in one part of a situation while obscuring smaller forms of choice elsewhere.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "vulnerable",
@@ -2163,7 +2163,7 @@
           "arousal": 0.45,
           "coordinates": "unpleasant · cautious",
           "definition": "Cautious alertness after noticing a possible sign of risk. Wariness slows approach and gathers more evidence without yet concluding that danger is certain.",
-          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "labelingNote": "If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.",
           "nearby": [
             {
               "word": "helpless",

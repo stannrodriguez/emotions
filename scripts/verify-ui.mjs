@@ -81,7 +81,16 @@ const base = `http://127.0.0.1:${PORT}`;
   const doc = await readFile(join(ROOT, 'design/Wheel Directions.dc.html'), 'utf8');
   const section = doc.slice(doc.indexOf('<div class="dv-opt" id="3b"'), doc.indexOf('<div class="dv-opt" id="3c"'));
   const start = section.indexOf('<div style="width:360px;');
-  const card = section.slice(start, section.lastIndexOf('</div>\n</div>\n</div>\n</div>'));
+  const card = section
+    .slice(start, section.lastIndexOf('</div>\n</div>\n</div>\n</div>'))
+    .replace(
+      'If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.',
+      'If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.'
+    )
+    .replace(
+      'saved words live in your lexicon, on this device',
+      'kept in your lexicon on this device'
+    );
   extras.set(
     '/__design-3b',
     `<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/assets/fonts.css">` +
@@ -196,10 +205,10 @@ heading('2. Seam distinctions');
   await clickPolar(200, 150); // bitter|resentful
   ok('written distinction shows its text', (await caption()).startsWith('Resentment still holds a live claim'));
 
-  await clickPolar(200, 30); // contemptuous|envious, unwritten
+  await clickPolar(200, 30); // contemptuous|envious, no pair-specific copy
   ok(
-    'unwritten boundary answers honestly',
-    (await caption()) === 'contemptuous | envious — every boundary answers a tap; this distinction is queued for writing.'
+    'generic boundary guidance is shippable',
+    (await caption()) === 'contemptuous | envious — read both pages and notice which definition fits more closely.'
   );
 
   await clickPolar(200, 155);
@@ -222,7 +231,7 @@ heading('2. Seam distinctions');
       await page.mouse.move(5, 5);
       await clickPolar(250, ((i + 1) * 360) / count);
       const text = await caption();
-      if (text.includes('queued for writing') || text.length > 40) answered++;
+      if (text.length > 40) answered++;
     }
   }
   ok('all 63 boundaries respond', answered === total && total === 63, `${answered}/${total}`);
@@ -375,7 +384,7 @@ heading('7. Authored leaf and first-run empty states');
     title: document.querySelector('.leaf__title').textContent,
     coords: document.querySelector('.leaf__coords').textContent,
     definition: document.querySelector('.leaf__definition')?.textContent,
-    note: !!document.querySelector('.leaf__labeling-note'),
+    note: document.querySelector('.leaf__labeling-note')?.textContent,
     nearby: !!document.querySelector('.leaf__section--nearby'),
     helps: !!document.querySelector('.leaf__section--helps'),
     keepEnabled: !document.querySelector('.leaf__keep').disabled,
@@ -383,7 +392,10 @@ heading('7. Authored leaf and first-run empty states');
   ok('authored leaf keeps its chrome, breadcrumb and H2', leaf.crumb === 'ANGRY / FURIOUS' && leaf.title === 'Furious');
   ok('authored definition is rendered', leaf.definition?.startsWith('Very high-intensity anger'));
   ok('authored coordinates are rendered', leaf.coords === 'unpleasant · blazing', JSON.stringify(leaf.coords));
-  ok('labeling note, NEARBY, and WHAT HELPS are rendered', leaf.note && leaf.nearby && leaf.helps);
+  ok(
+    'polished labeling note, NEARBY, and WHAT HELPS are rendered',
+    leaf.note === 'If this word fits, pause with it for a moment. Naming what you feel can make the emotion easier to understand and work with.' && leaf.nearby && leaf.helps
+  );
   ok('+ KEEP THIS WORD stays enabled', leaf.keepEnabled);
 
   await page.click('.leaf__keep');
@@ -413,12 +425,12 @@ heading('7. Authored leaf and first-run empty states');
     spokes: document.querySelectorAll('.constellation__svg line').length,
   }));
   ok('constellation first run keeps circle and spokes', empty.circles === 1 && empty.spokes === 6, JSON.stringify(empty));
-  ok('with its first-run caption', empty.caption.startsWith('Nothing has landed yet.'));
+  ok('with its first-run caption', empty.caption.startsWith('Keep a word to place it here.'));
 
   await page.goto(`${base}/#/lexicon`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(300);
   ok('emptied lexicon shows its own line and does not re-seed',
-    (await page.locator('.lexicon__empty').textContent()) === 'No words kept yet. When one fits, keep it from its page.');
+    (await page.locator('.lexicon__empty').textContent()) === 'No kept words yet. Keep one from any emotion page, or add your own below.');
 
   await page.evaluate(() => localStorage.clear());
   await page.reload({ waitUntil: 'networkidle' });

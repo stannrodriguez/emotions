@@ -2,8 +2,7 @@
  * The taxonomy: loads the canonical `emotions.json` and decorates it with the
  * angular layout both the wheel and the constellation draw from.
  *
- * emotions.json is the source of truth for data. Nothing here invents content —
- * null fields stay null and the views render the queued state for them.
+ * emotions.json is the source of truth for data. Nothing here invents content.
  */
 
 let cache = null;
@@ -89,10 +88,10 @@ export function build(raw) {
       };
     },
 
-    /** Written distinction for a pair, or null if it is still queued. */
+    /** Pair-specific distinction when one is authored; otherwise null. */
     distinction: (a, b) => raw.distinctions[`${a}|${b}`] ?? raw.distinctions[`${b}|${a}`] ?? null,
 
-    /** True when a word has authored leaf content (only `resentful`, for now). */
+    /** True when a word has authored leaf content. */
     isWritten: (wordId) => Boolean(byWord.get(wordId)?.word?.definition),
   };
 }

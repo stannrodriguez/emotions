@@ -29,12 +29,10 @@ const HIT_R = 12;
 const WINDOW_DAYS = 24;
 
 const CAPTION =
-  'Only the newest landing is named; tapping any dot names it. Brightness is recency. A mirror, not a tracker.';
+  'The newest landing is labeled. Tap any dot to name it; brighter dots are newer. A mirror, not a tracker.';
 
-/* PROVISIONAL COPY — product-owner placeholder for the first run, shipped as
- * written. See "Missing content: the queued state" in design/HANDOFF.md. */
 const EMPTY_CAPTION =
-  'Nothing has landed yet. Words you keep are drawn here, where they live on the wheel.';
+  'Keep a word to place it here. Over time, your recent landings form a constellation.';
 
 function el(name, attrs = {}, text) {
   const node = document.createElementNS(SVG_NS, name);

@@ -180,7 +180,7 @@ for (const f of atlas.families) {
     else queued++;
   });
 }
-console.log(`  boundaries: ${written + queued}  written: ${written}  queued: ${queued}`);
+console.log(`  boundaries: ${written + queued}  pair-specific: ${written}  guided: ${queued}`);
 check('every bloomed boundary resolves to text', written + queued === 63);
 check('the six written distinctions are all reachable from a bloom', written === 6);
 
@@ -196,7 +196,7 @@ check('seam zone is at least 44px wide everywhere', inner * 2 * (Math.PI / 180) 
 heading('8. Authored content');
 const withContent = atlas.families.flatMap((f) => f.words.filter((w) => w.definition).map((w) => w.id));
 console.log(`  words with authored leaf content: ${withContent.join(', ') || '(none)'}`);
-check('authored-page rollout has started', withContent.length >= 2);
+check('all 63 emotion pages are authored', withContent.length === 63);
 check('resentful remains the authored model', withContent.includes('resentful'));
 for (const family of atlas.families) {
   family.words.forEach((word, index) => {

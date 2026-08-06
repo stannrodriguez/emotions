@@ -41,12 +41,10 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 /** Wheel is centred and capped at ~560px on desktop; below that it fills the column. */
 const DESKTOP_MAX = 560;
 
-/* ------------------------------------------------------------------ copy ---
- * Caption strings. These are final copy from the handoff, not placeholders.
- */
+/* ------------------------------------------------------------------ copy */
 
 const DEFAULT_CAPTION =
-  'Tap a family to bloom it into finer words. Precise naming is itself regulation: labeling an emotion precisely measurably lowers its intensity.';
+  'Choose the closest family, then narrow it down. Precise naming can make an emotion easier to work with.';
 
 /**
  * The affordance hint, taught once on first bloom.
@@ -56,19 +54,19 @@ const DEFAULT_CAPTION =
  * not worth minting a third.
  */
 const SEAM_HINT =
-  'The border between any two words holds their distinction — tap a boundary to read it.';
+  'Tap the border between two words to compare them.';
 let seamHintShown = false;
 
 const bloomCaption = (familyId, count) =>
-  `${familyId} → ${count} finer words, laid beside their nearest neighbors.` +
+  `${familyId} → ${count} nearby shades. Choose the closest word.` +
   (seamHintShown ? '' : ` ${SEAM_HINT}`);
 
-/** Honest fallback for a boundary whose distinction has not been written yet. */
-const queuedSeamCaption = (a, b) =>
-  `${a} | ${b} — every boundary answers a tap; this distinction is queued for writing.`;
+/** Guidance for a boundary without a pair-specific authored distinction. */
+const seamGuidance = (a, b) =>
+  `${a} | ${b} — read both pages and notice which definition fits more closely.`;
 
 const leafPreview = (word) =>
-  `${word} — tap to open its page: definition, neighbors, matched techniques.`;
+  `${word} — open its definition, close neighbors, and practical next steps.`;
 
 /* ----------------------------------------------------------------- helpers */
 
@@ -306,7 +304,7 @@ export function createWheelView({ taxonomy, navigate }) {
   }
 
   const bloomPreview = (family) =>
-    `${family.id} — ${family.words.length} finer words. Tap to bloom.`;
+    `${family.id} — ${family.words.length} finer words. Tap to explore.`;
 
   /* ---------------------------------------------------------------- bloom --- */
 
@@ -447,7 +445,7 @@ export function createWheelView({ taxonomy, navigate }) {
       return { kind: 'leaf', index, word: family.words[index] };
     };
 
-    const describeSeam = (a, b) => taxonomy.distinction(a, b) ?? queuedSeamCaption(a, b);
+    const describeSeam = (a, b) => taxonomy.distinction(a, b) ?? seamGuidance(a, b);
 
     let lastKey = '';
     surface.addEventListener('pointermove', (event) => {

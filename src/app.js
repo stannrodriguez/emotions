@@ -25,19 +25,20 @@ const VIEWS = {
 };
 
 const FOOTNOTE =
-  'Naming an emotion precisely measurably dampens it. Finding the word is the first technique, not just the doorway.';
+  'Naming what you feel can soften its intensity. Finding the word is a useful first step.';
+const titleCase = (value) => value.charAt(0).toUpperCase() + value.slice(1);
 
 async function main() {
   const mount = document.getElementById('app');
 
   let taxonomy;
   try {
-    mount.innerHTML = '<p class="shell__loading">Loading</p>';
+    mount.innerHTML = '<p class="shell__loading">Loading the atlas…</p>';
     taxonomy = await loadTaxonomy();
   } catch (error) {
     mount.removeAttribute('aria-busy');
     mount.innerHTML =
-      '<p class="shell__error">The atlas could not load its data. Reload to try again.</p>';
+      '<p class="shell__error">Emotion Atlas couldn’t start. Reload the page to try again.</p>';
     console.error(error);
     return;
   }
@@ -51,12 +52,12 @@ async function main() {
   masthead.className = 'shell__masthead';
   masthead.innerHTML = `
     <h1 class="shell__name">EMOTION ATLAS</h1>
-    <span class="shell__tagline">working name — find the word for it</span>
+    <span class="shell__tagline">find the clearest word for what you feel</span>
   `;
 
   const tabs = document.createElement('nav');
   tabs.className = 'shell__tabs';
-  tabs.setAttribute('aria-label', 'Views');
+  tabs.setAttribute('aria-label', 'Primary views');
 
   const viewSlot = document.createElement('main');
 
@@ -114,8 +115,8 @@ async function main() {
     }
 
     document.title =
-      route.word ? `${route.word} — Emotion Atlas`
-      : route.family ? `${route.family} — Emotion Atlas`
+      route.word ? `${titleCase(route.word)} — Emotion Atlas`
+      : route.family ? `${titleCase(route.family)} — Emotion Atlas`
       : 'Emotion Atlas';
   });
 }
