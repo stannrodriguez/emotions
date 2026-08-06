@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "14 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "15 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -429,11 +429,36 @@
         {
           "id": "amused",
           "arousal": 0.6,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "pleasant · playful",
+          "definition": "Light pleasure sparked by incongruity, wit, or harmless absurdity. Amusement loosens seriousness for a moment and invites laughter, play, or a fresh angle.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "joyful",
+              "contrast": "An absorbing sense of present goodness. Amused centers on pleasure in a harmless mismatch or joke."
+            },
+            {
+              "word": "proud",
+              "contrast": "Earned satisfaction in valued effort or conduct. Amused centers on pleasure in a harmless mismatch or joke."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Stay with the signal",
+              "body": "Notice how amused feels in the body for twenty uninterrupted seconds before reaching for a screen, explanation, or next task. Attention helps a positive state register instead of passing unnoticed.",
+              "whereItBreaks": "trying to hold the feeling can turn savoring into pressure. Let it change when it changes."
+            },
+            {
+              "name": "Name the source",
+              "body": "Finish the sentence “This feeling came from ___.” Be specific about the person, effort, condition, or moment so you can recognize what supports it.",
+              "whereItBreaks": "do not turn good fortune into a demand to optimize every future moment. Recognition is enough."
+            },
+            {
+              "name": "Let it move",
+              "body": "Choose one proportionate expression: tell someone, mark the moment, offer thanks, or repeat the nourishing condition. Positive emotion becomes more usable when it has a clean outlet.",
+              "whereItBreaks": "sharing can become performance if you need a particular reaction. Choose an expression that remains worthwhile on its own."
+            }
+          ]
         },
         {
           "id": "proud",
