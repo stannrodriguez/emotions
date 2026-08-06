@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "25 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "26 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -811,11 +811,36 @@
         {
           "id": "melancholy",
           "arousal": 0.25,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · low",
+          "definition": "A quiet, lingering sadness that may not have one clear cause. Melancholy colors experience with loss or distance while leaving room for reflection and even beauty.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "grieving",
+              "contrast": "The whole-person adjustment to irreversible loss. Melancholy centers on diffuse sadness that lingers without one clear event."
+            },
+            {
+              "word": "homesick",
+              "contrast": "Separation from the familiar shape of belonging. Melancholy centers on diffuse sadness that lingers without one clear event."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice melancholy without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel melancholy because I wanted or valued ___.” Melancholy centers on diffuse sadness that lingers without one clear event; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         },
         {
           "id": "homesick",
