@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "60 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "61 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -2093,11 +2093,36 @@
         {
           "id": "vulnerable",
           "arousal": 0.4,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · open",
+          "definition": "Awareness that something important can be hurt, lost, rejected, or exposed. Vulnerability is not the same as danger; it is the condition of caring without complete control over the outcome.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "self-conscious",
+              "contrast": "Fearful self-monitoring under imagined scrutiny. Vulnerable centers on being open to loss because something matters."
+            },
+            {
+              "word": "helpless",
+              "contrast": "A perceived lack of effective options or influence. Vulnerable centers on being open to loss because something matters."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Settle the body first",
+              "body": "Lengthen the exhale and press your feet or back into a stable surface for one minute. Vulnerable centers on being open to loss because something matters; a steadier body can evaluate it more accurately.",
+              "whereItBreaks": "regulation is not a substitute for leaving immediate danger. Safety comes first."
+            },
+            {
+              "name": "Size the threat",
+              "body": "Write three lines: what you know, what you are predicting, and what would tell you the risk is increasing. This turns a cloud of fear into conditions you can monitor.",
+              "whereItBreaks": "risk analysis can become reassurance-seeking. Stop when no new evidence is being added."
+            },
+            {
+              "name": "Take the smallest safe step",
+              "body": "Choose one action that increases safety or information without requiring certainty: ask, check, prepare, practice, or get support. Then reassess from the new position.",
+              "whereItBreaks": "small steps are not enough when delay increases danger. Use urgent help or a full exit when the situation requires it."
+            }
+          ]
         },
         {
           "id": "helpless",
