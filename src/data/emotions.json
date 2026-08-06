@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "29 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "30 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -947,11 +947,36 @@
         {
           "id": "disappointed",
           "arousal": 0.45,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · sinking",
+          "definition": "Sadness when an outcome, person, or experience falls short of what you reasonably hoped for. Disappointment revises an expectation; it does not automatically decide what happens next.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "hurt",
+              "contrast": "Pain where something valued was touched or damaged. Disappointed centers on a particular outcome falling short of hope."
+            },
+            {
+              "word": "discouraged",
+              "contrast": "Difficulty weakening the will to continue. Disappointed centers on a particular outcome falling short of hope."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice disappointed without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel disappointed because I wanted or valued ___.” Disappointed centers on a particular outcome falling short of hope; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         },
         {
           "id": "discouraged",
