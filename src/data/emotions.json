@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "34 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "35 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1117,11 +1117,36 @@
         {
           "id": "ashamed",
           "arousal": 0.45,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · exposed",
+          "definition": "The painful sense that a flaw or failure reveals something unacceptable about who you are. Shame turns judgment from an act toward the whole self and creates an urge to hide.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "guilty",
+              "contrast": "A specific action that appears to violate your values. Ashamed centers on a judgment that condemns the whole self."
+            },
+            {
+              "word": "nostalgic",
+              "contrast": "Longing that keeps the warmth of a meaningful past. Ashamed centers on a judgment that condemns the whole self."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice ashamed without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel ashamed because I wanted or valued ___.” Ashamed centers on a judgment that condemns the whole self; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         }
       ]
     },
