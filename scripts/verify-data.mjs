@@ -196,19 +196,28 @@ check('seam zone is at least 44px wide everywhere', inner * 2 * (Math.PI / 180) 
 heading('8. Authored content');
 const withContent = atlas.families.flatMap((f) => f.words.filter((w) => w.definition).map((w) => w.id));
 console.log(`  words with authored leaf content: ${withContent.join(', ') || '(none)'}`);
-check('exactly one word is written', withContent.length === 1 && withContent[0] === 'resentful');
-const res = atlas.word('resentful');
-check('resentful nearby count', res.nearby.length === 2);
-check('resentful techniques count', res.techniques.length === 3);
-check(
-  'resentful nearby words are physically adjacent on the wheel',
-  (() => {
-    const idx = angry.words.findIndex((w) => w.id === 'resentful');
-    const { prev, next } = bloomNeighbours(angry, idx);
-    const adj = new Set([prev.id, next.id]);
-    return res.nearby.every((n) => adj.has(n.word));
-  })()
-);
+check('authored-page rollout has started', withContent.length >= 2);
+check('resentful remains the authored model', withContent.includes('resentful'));
+for (const family of atlas.families) {
+  family.words.forEach((word, index) => {
+    if (!word.definition) return;
+    const { prev, next } = bloomNeighbours(family, index);
+    const adjacent = new Set([prev.id, next.id]);
+    check(`${word.id} has authored coordinates`, Boolean(word.coordinates?.trim()));
+    check(`${word.id} has a labeling note`, Boolean(word.labelingNote?.trim()));
+    check(`${word.id} has two nearby contrasts`, word.nearby?.length === 2);
+    check(
+      `${word.id} nearby words are physically adjacent`,
+      word.nearby?.every((entry) => adjacent.has(entry.word) && entry.contrast?.trim())
+    );
+    check(
+      `${word.id} has three complete techniques`,
+      word.techniques?.length === 3 && word.techniques.every((technique) =>
+        technique.name?.trim() && technique.body?.trim() && technique.whereItBreaks?.trim()
+      )
+    );
+  });
+}
 check('adopted seeds present', atlas.adoptedSeeds.length === 3);
 console.log(`  adopted seeds: ${atlas.adoptedSeeds.map((s) => `${s.word} (${s.origin})`).join(', ')}`);
 
