@@ -1,21 +1,17 @@
 /**
  * Lexicon (2b) — kept words, including adopted ones.
  *
- * Rows carry only what was authored or what the reader typed. A wheel word with
- * no written page shows the queued line rather than a generated summary.
+ * Rows carry only what was authored or what the reader typed.
  */
 
 import { daysAgo, getLexicon, keepWord, subscribe } from '../core/storage.js';
 
-/* PROVISIONAL COPY — product-owner placeholders, shipped as written.
- * See "Missing content: the queued state" in design/HANDOFF.md. */
-const QUEUED_DEFINITION = 'page queued for writing.';
-const EMPTY_LEXICON = 'No words kept yet. When one fits, keep it from its page.';
-/* ------------------------------------------------------------------------ */
+const MISSING_DEFINITION = 'Definition unavailable.';
+const EMPTY_LEXICON = 'No kept words yet. Keep one from any emotion page, or add your own below.';
 
-const ADD_PLACEHOLDER = '+ ADD A WORD THAT FITS';
+const ADD_PLACEHOLDER = '+ ADD YOUR OWN WORD';
 const FOOTNOTE =
-  'Words from the wheel arrive with their page; adopted words carry their origin and a plain definition.';
+  'Wheel words keep their full page. Your own words stay private on this device.';
 
 function h(tag, className, text) {
   const node = document.createElement(tag);
@@ -50,7 +46,7 @@ export function createLexiconView({ taxonomy, navigate }) {
     const head = h('div', 'lexicon__head');
     head.appendChild(h('h2', 'lexicon__title', 'LEXICON'));
     head.appendChild(
-      h('span', 'lexicon__count', `${entries.length} ${entries.length === 1 ? 'WORD' : 'WORDS'} · THIS DEVICE`)
+      h('span', 'lexicon__count', `${entries.length} ${entries.length === 1 ? 'WORD' : 'WORDS'} · ON THIS DEVICE`)
     );
     card.appendChild(head);
 
@@ -64,7 +60,7 @@ export function createLexiconView({ taxonomy, navigate }) {
       const top = h('div', 'lexicon__row-top');
       const isWheelWord = entry.familyId !== 'adopted' && taxonomy.word(entry.word);
       if (isWheelWord) {
-        // A kept wheel word links back to its page, written or queued.
+        // A kept wheel word links back to its full page.
         const link = h('a', 'lexicon__word lexicon__word--link', entry.word);
         link.href = `#/${entry.familyId}/${entry.word}`;
         top.appendChild(link);
@@ -77,7 +73,7 @@ export function createLexiconView({ taxonomy, navigate }) {
       if (entry.definition) {
         row.appendChild(h('p', 'lexicon__definition', entry.definition));
       } else if (isWheelWord) {
-        row.appendChild(h('p', 'lexicon__queued', QUEUED_DEFINITION));
+        row.appendChild(h('p', 'lexicon__queued', MISSING_DEFINITION));
       }
 
       card.appendChild(row);
@@ -90,7 +86,7 @@ export function createLexiconView({ taxonomy, navigate }) {
     input.className = 'lexicon__add';
     input.type = 'text';
     input.placeholder = ADD_PLACEHOLDER;
-    input.setAttribute('aria-label', 'Add a word that fits');
+    input.setAttribute('aria-label', 'Add your own word');
     input.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter') return;
       const word = input.value.trim();

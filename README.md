@@ -5,9 +5,9 @@ each word opens a page. Two secondary views: **Constellation** (recent landings
 drawn on the wheel's geometry) and **Lexicon** (kept words, including adopted
 foreign ones).
 
-Precise naming is itself the first intervention — affect labeling measurably
-lowers emotional intensity — so the app treats finding the word as therapy, not
-just navigation.
+Research on affect labeling suggests that putting feelings into words can
+reduce emotional reactivity. The app treats precise naming as a useful first
+step for reflection, not as therapy or diagnosis.
 
 No backend, no accounts, no analytics. All state is on-device.
 
@@ -34,20 +34,20 @@ npm run verify:all    # both
 `verify` checks family word counts (10 / 11 / 12 / 7 / 12 / 11 = 63), the six
 written distinction keys, the family seam edges, the greyscale lightness
 ordering, the within-bloom arousal ordering, label auto-fit and upside-down
-rotation, seam hit-zone widths, and that exactly one word (`resentful`) carries
-authored content.
+rotation, seam hit-zone widths, and the completeness and wheel adjacency of all
+63 authored emotion pages.
 
 `verify:ui` drives the app: the radius-dependent seam rule, keyboard navigation,
 the five deep links, the bloom animation and its reduced-motion behaviour, the
-12px label floor across eight widths, and both queued states.
+12px label floor across eight widths, authored leaf content, and first-run empty
+states.
 
 It also **pixel-diffs the leaf page against the design file's own 3b markup**,
 which it extracts from `design/Wheel Directions.dc.html` at runtime and serves
 alongside the build. Comparing against `screenshots/leaf-page.png` would be
 misleading — that capture was made on a platform whose text shaping is ~1.4%
 narrower at 14.5px, which reflows a line. Diffing against the markup removes
-the platform from the comparison. It currently reports 0 differing pixels of
-471,366.
+the platform from the comparison. It reports zero differing pixels.
 
 Both run in CI and gate the Pages deploy.
 
@@ -67,11 +67,11 @@ neither view owns them.
 
 ## Content status
 
-62 of the 63 words have no authored leaf content yet, and 57 of the 63 boundary
-distinctions are unwritten. The app renders an honest queued state for these —
-see "Missing content: the queued state" in `design/HANDOFF.md`. **Content is
-never generated to fill the gaps.** `resentful` is the written template; the
-rest arrive from the product owner.
+All 63 emotion pages are authored. Each carries evocative coordinates, a concise
+definition, the two words physically adjacent on the wheel, and three practical
+techniques with explicit limits. `resentful` remains the voice and structure
+model. Six boundaries have pair-specific distinctions; every other boundary
+guides the reader to compare the two complete pages.
 
 ## Storage
 
@@ -81,8 +81,7 @@ rest arrive from the product owner.
 | `atlas.landings` | `[{word, at}]`                                                  |
 
 The `atlas.` prefix is a frozen internal identifier, independent of the product
-name (still a working name). Renaming it would lose every kept word to a
-migration.
+name. Renaming it would lose every kept word without a migration.
 
 ## Deployment
 

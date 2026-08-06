@@ -4,25 +4,18 @@
  * Every size, colour, and gap below traces to the 3b markup in
  * Wheel Directions.dc.html and the "Leaf page" section of the handoff.
  *
- * All copy on this page is authored content from emotions.json. Nothing here
- * generates definitions, contrasts, coordinates, or techniques — 62 of the 63
- * words have none yet, and those render the queued state instead.
+ * All copy on this page is authored content from emotions.json. The fallback
+ * below is defensive only; every canonical emotion page is complete.
  */
 
 import { keepWord, hasWord, subscribe } from '../core/storage.js';
 
-/* --------------------------------------------------------------- queued ---
- * PROVISIONAL COPY — product-owner placeholder, shipped as written.
- * Flagged here so it is easy to find and revise when the pages are written.
- * See "Missing content: the queued state" in design/HANDOFF.md.
- */
-const QUEUED_DEFINITION = "This word's page is queued for writing.";
-/* ------------------------------------------------------------------------ */
+const MISSING_DEFINITION = 'Definition unavailable. Reload the page to try again.';
 
 const KEEP_LABEL = '+ KEEP THIS WORD';
 /** Post-keep state for the same button. A UI state, not product copy. */
 const KEPT_LABEL = 'KEPT';
-const KEEP_NOTE = 'saved words live in your lexicon, on this device';
+const KEEP_NOTE = 'kept in your lexicon on this device';
 
 const titleCase = (word) => word.charAt(0).toUpperCase() + word.slice(1);
 
@@ -68,7 +61,7 @@ export function createLeafView({ taxonomy, navigate }) {
     if (word.definition) {
       head.appendChild(h('p', 'leaf__definition', word.definition));
     } else {
-      head.appendChild(h('p', 'leaf__queued', QUEUED_DEFINITION));
+      head.appendChild(h('p', 'leaf__queued', MISSING_DEFINITION));
     }
     card.appendChild(head);
 
@@ -105,8 +98,7 @@ export function createLeafView({ taxonomy, navigate }) {
       card.appendChild(section);
     }
 
-    /* Footer. Keeping stays available for unwritten words — the keep works and
-     * records a landing; the page arrives when it is written. */
+    /* Footer. Keeping records the word in the lexicon and constellation. */
     const footer = h('div', 'leaf__footer');
     const keep = h('button', 'leaf__keep');
     keep.type = 'button';
