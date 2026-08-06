@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "18 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "19 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -565,11 +565,36 @@
         {
           "id": "affectionate",
           "arousal": 0.45,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "pleasant · tender",
+          "definition": "Warmth toward someone or something that matters, paired with an impulse for closeness, care, or gentle expression. Affection can be quiet and steady without being less real.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "grateful",
+              "contrast": "Recognition of a valued benefit received. Affectionate centers on warmth that moves toward care and closeness."
+            },
+            {
+              "word": "moved",
+              "contrast": "Meaning that reaches more deeply than a single feeling. Affectionate centers on warmth that moves toward care and closeness."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Stay with the signal",
+              "body": "Notice how affectionate feels in the body for twenty uninterrupted seconds before reaching for a screen, explanation, or next task. Attention helps a positive state register instead of passing unnoticed.",
+              "whereItBreaks": "trying to hold the feeling can turn savoring into pressure. Let it change when it changes."
+            },
+            {
+              "name": "Name the source",
+              "body": "Finish the sentence “This feeling came from ___.” Be specific about the person, effort, condition, or moment so you can recognize what supports it.",
+              "whereItBreaks": "do not turn good fortune into a demand to optimize every future moment. Recognition is enough."
+            },
+            {
+              "name": "Let it move",
+              "body": "Choose one proportionate expression: tell someone, mark the moment, offer thanks, or repeat the nourishing condition. Positive emotion becomes more usable when it has a clean outlet.",
+              "whereItBreaks": "sharing can become performance if you need a particular reaction. Choose an expression that remains worthwhile on its own."
+            }
+          ]
         },
         {
           "id": "moved",
