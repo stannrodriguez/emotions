@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "42 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "43 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1405,11 +1405,36 @@
         {
           "id": "contemptuous",
           "arousal": 0.55,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · hard",
+          "definition": "Anger and disgust organized around the judgment that someone is beneath respect. Contempt attacks standing and character, making curiosity, repair, and equal dialogue difficult.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "furious",
+              "contrast": "Anger intense enough to demand immediate action. Contemptuous centers on anger that places its target below respect."
+            },
+            {
+              "word": "envious",
+              "contrast": "Wanting a valued advantage someone else has. Contemptuous centers on anger that places its target below respect."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Lower the heat before acting",
+              "body": "Delay the message or decision until your body is below the peak of the feeling. Use brisk movement, slower exhalations, or cold water, then return to what made you contemptuous.",
+              "whereItBreaks": "calming down must not become abandoning a legitimate claim. Set a time to return to it."
+            },
+            {
+              "name": "Name the blocked value",
+              "body": "Complete “I am contemptuous because ___ is blocking or violating ___.” Contemptuous centers on anger that places its target below respect; precision separates the value from the first impulse.",
+              "whereItBreaks": "a value is not proof that your preferred remedy is fair. Check impact and constraints before acting."
+            },
+            {
+              "name": "Make one clean move",
+              "body": "Choose the smallest action that protects the value: a request, boundary, consequence, repair, or exit. State it without a case file or attack on character.",
+              "whereItBreaks": "some situations are unsafe or structurally fixed. When direct action carries real risk, seek support and plan before confronting."
+            }
+          ]
         },
         {
           "id": "envious",
