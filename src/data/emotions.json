@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "40 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "41 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1329,11 +1329,36 @@
         {
           "id": "scornful",
           "arousal": 0.6,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · cutting",
+          "definition": "Contempt expressed through open mockery or derision. Scorn protects status by treating its target as ridiculous and unworthy of serious engagement.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "appalled",
+              "contrast": "Moral shock at an unacceptable violation. Scornful centers on contempt made visible through ridicule."
+            },
+            {
+              "word": "disdainful",
+              "contrast": "Detached rejection of something judged beneath regard. Scornful centers on contempt made visible through ridicule."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Create clean distance",
+              "body": "Reduce contact long enough to let the first wave of the feeling settle: step back, close the tab, ventilate, or pause the conversation. Distance makes choice possible when you feel scornful.",
+              "whereItBreaks": "avoidance can teach the system that every discomfort is dangerous. Return when contact is safe and relevant."
+            },
+            {
+              "name": "Locate the boundary",
+              "body": "Finish “This feels unacceptable because ___.” Scornful centers on contempt made visible through ridicule; identify the concrete behavior, substance, or value violation rather than condemning a whole person.",
+              "whereItBreaks": "a boundary stated as a character judgment invites contempt instead of useful protection. Keep it behavioral."
+            },
+            {
+              "name": "Check the verdict",
+              "body": "Separate what you directly observed from what you inferred about contamination, intent, or worth. Keep the protective signal while testing the conclusion it produced.",
+              "whereItBreaks": "analysis is not required when the evidence already shows a real safety or consent violation. Act on the boundary."
+            }
+          ]
         },
         {
           "id": "disdainful",
