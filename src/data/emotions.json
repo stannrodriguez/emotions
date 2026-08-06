@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "43 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "44 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1439,11 +1439,36 @@
         {
           "id": "envious",
           "arousal": 0.5,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · coveting",
+          "definition": "Pain at seeing someone else possess an advantage, quality, or experience you want. Envy points toward an unmet desire, but can turn corrosive when it requires the other person to lose it.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "contemptuous",
+              "contrast": "Anger that places its target below respect. Envious centers on wanting a valued advantage someone else has."
+            },
+            {
+              "word": "jealous",
+              "contrast": "Guarding a valued bond or position from a rival. Envious centers on wanting a valued advantage someone else has."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Lower the heat before acting",
+              "body": "Delay the message or decision until your body is below the peak of the feeling. Use brisk movement, slower exhalations, or cold water, then return to what made you envious.",
+              "whereItBreaks": "calming down must not become abandoning a legitimate claim. Set a time to return to it."
+            },
+            {
+              "name": "Name the blocked value",
+              "body": "Complete “I am envious because ___ is blocking or violating ___.” Envious centers on wanting a valued advantage someone else has; precision separates the value from the first impulse.",
+              "whereItBreaks": "a value is not proof that your preferred remedy is fair. Check impact and constraints before acting."
+            },
+            {
+              "name": "Make one clean move",
+              "body": "Choose the smallest action that protects the value: a request, boundary, consequence, repair, or exit. State it without a case file or attack on character.",
+              "whereItBreaks": "some situations are unsafe or structurally fixed. When direct action carries real risk, seek support and plan before confronting."
+            }
+          ]
         },
         {
           "id": "jealous",
