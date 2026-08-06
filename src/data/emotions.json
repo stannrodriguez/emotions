@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "54 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "55 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1889,11 +1889,36 @@
         {
           "id": "dreading",
           "arousal": 0.6,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · looming",
+          "definition": "Fear directed toward a future event you expect to be painful, difficult, or unavoidable. Dread begins the experience early, repeatedly rehearsing what has not happened yet.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "overwhelmed",
+              "contrast": "Too many demands for current capacity. Dreading centers on anticipating a difficult event that feels hard to avoid."
+            },
+            {
+              "word": "anxious",
+              "contrast": "Bracing for a threat that remains uncertain. Dreading centers on anticipating a difficult event that feels hard to avoid."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Settle the body first",
+              "body": "Lengthen the exhale and press your feet or back into a stable surface for one minute. Dreading centers on anticipating a difficult event that feels hard to avoid; a steadier body can evaluate it more accurately.",
+              "whereItBreaks": "regulation is not a substitute for leaving immediate danger. Safety comes first."
+            },
+            {
+              "name": "Size the threat",
+              "body": "Write three lines: what you know, what you are predicting, and what would tell you the risk is increasing. This turns a cloud of fear into conditions you can monitor.",
+              "whereItBreaks": "risk analysis can become reassurance-seeking. Stop when no new evidence is being added."
+            },
+            {
+              "name": "Take the smallest safe step",
+              "body": "Choose one action that increases safety or information without requiring certainty: ask, check, prepare, practice, or get support. Then reassess from the new position.",
+              "whereItBreaks": "small steps are not enough when delay increases danger. Use urgent help or a full exit when the situation requires it."
+            }
+          ]
         },
         {
           "id": "anxious",
