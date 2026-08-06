@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "31 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "32 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -1015,11 +1015,36 @@
         {
           "id": "hopeless",
           "arousal": 0.2,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · extinguished",
+          "definition": "The felt conclusion that a wanted future is no longer reachable. Hopelessness narrows attention so thoroughly that alternatives, support, and change can become difficult to perceive.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "discouraged",
+              "contrast": "Difficulty weakening the will to continue. Hopeless centers on a wanted future appearing to have no path."
+            },
+            {
+              "word": "regretful",
+              "contrast": "Pain about your own choice or omission. Hopeless centers on a wanted future appearing to have no path."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice hopeless without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel hopeless because I wanted or valued ___.” Hopeless centers on a wanted future appearing to have no path; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         },
         {
           "id": "regretful",
