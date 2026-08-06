@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "contentStatus": "30 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
+    "contentStatus": "31 of 63 emotion pages have authored leaf content; resentful is the voice and structure model.",
     "wordCount": 63
   },
   "families": [
@@ -981,11 +981,36 @@
         {
           "id": "discouraged",
           "arousal": 0.35,
-          "coordinates": null,
-          "definition": null,
-          "labelingNote": null,
-          "nearby": null,
-          "techniques": null
+          "coordinates": "unpleasant · draining",
+          "definition": "A loss of confidence or motivation after difficulty, delay, or repeated setbacks. Discouragement questions whether continued effort will matter, even when the goal still does.",
+          "labelingNote": "If this word fits, the naming has already started to work: labeling an emotion precisely measurably lowers its intensity.",
+          "nearby": [
+            {
+              "word": "disappointed",
+              "contrast": "A particular outcome falling short of hope. Discouraged centers on difficulty weakening the will to continue."
+            },
+            {
+              "word": "hopeless",
+              "contrast": "A wanted future appearing to have no path. Discouraged centers on difficulty weakening the will to continue."
+            }
+          ],
+          "techniques": [
+            {
+              "name": "Make room for the feeling",
+              "body": "Set a short, protected interval to notice discouraged without arguing with it. Locate it in the body and let the feeling be information rather than a verdict.",
+              "whereItBreaks": "unstructured immersion can deepen a spiral. Use a time boundary and return to food, sleep, movement, or company."
+            },
+            {
+              "name": "Name what is missing",
+              "body": "Complete “I feel discouraged because I wanted or valued ___.” Discouraged centers on difficulty weakening the will to continue; naming the missing thing clarifies whether it can be repaired, sought, or mourned.",
+              "whereItBreaks": "not every loss contains a lesson or action. Do not manufacture one to avoid grief."
+            },
+            {
+              "name": "Choose contact or care",
+              "body": "Ask whether this moment needs witness, practical help, repair, or gentle routine. Make one small request or act of care that matches the answer.",
+              "whereItBreaks": "the wrong audience can increase exposure or shame. Choose someone able to respond, or begin with private care."
+            }
+          ]
         },
         {
           "id": "hopeless",
