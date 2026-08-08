@@ -550,6 +550,67 @@ heading('9. Bloom caption previews name a leaf\'s depth words');
   await page.close();
 }
 
+/* ------------------------------------------ 10. adopted words on the map --- */
+
+heading('10. Adopted depth words on the constellation');
+{
+  const page = await newPage({ viewport: { width: 460, height: 1000 } });
+  await page.goto(`${base}/#/`, { waitUntil: 'networkidle' });
+  // hiraeth is an adopted depth word (anchor: homesick); "sonder" is the
+  // reader's own word with no anchor and must not be drawn.
+  await page.evaluate(() => {
+    const now = new Date().toISOString();
+    localStorage.setItem(
+      'atlas.lexicon',
+      JSON.stringify([
+        { word: 'hiraeth', familyId: 'adopted', origin: 'Welsh', keptAt: now },
+        { word: 'sonder', familyId: 'adopted', keptAt: now },
+      ])
+    );
+  });
+  await seedLandings(page, [['resentful', 2]]);
+  await page.goto(`${base}/#/constellation`, { waitUntil: 'networkidle' });
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+
+  const map = await page.evaluate(() => ({
+    rings: document.querySelectorAll('.constellation__adopted').length,
+    dots: document.querySelectorAll('.constellation__dot').length,
+    hits: [...document.querySelectorAll('.constellation__hit')].map((n) => n.getAttribute('aria-label')),
+    labels: [...document.querySelectorAll('.constellation__label')].map((n) => n.textContent),
+    caption: document.querySelector('.constellation__caption').textContent,
+    aria: document.querySelector('.constellation__svg').getAttribute('aria-label'),
+  }));
+  ok('one ring for the adopted depth word, none for the unanchored word', map.rings === 1, `${map.rings} rings`);
+  ok('landing dots are unaffected', map.dots === 1, `${map.dots} dots`);
+  ok('the ring is anchored and tappable', map.hits.includes('hiraeth, adopted near homesick'), JSON.stringify(map.hits));
+  ok('rings are not auto-labeled — only the newest landing is', JSON.stringify(map.labels) === '["resentful"]', JSON.stringify(map.labels));
+  ok('the caption explains the rings', map.caption.endsWith('Hollow rings are adopted words, drawn near their wheel anchors.'), map.caption);
+  ok('the svg names both kinds of mark', map.aria.includes('1 landing') && map.aria.includes('1 adopted word'), map.aria);
+
+  await page.evaluate(() => {
+    [...document.querySelectorAll('.constellation__hit')]
+      .find((n) => n.getAttribute('aria-label').startsWith('hiraeth'))
+      .dispatchEvent(new MouseEvent('click', { bubbles: true }));
+  });
+  await page.waitForTimeout(150);
+  const named = await page.evaluate(() =>
+    [...document.querySelectorAll('.constellation__label')].map((n) => n.textContent)
+  );
+  ok('tapping a ring names it', named.includes('hiraeth'), JSON.stringify(named));
+
+  // Rings persist beyond the landing window: they mirror the lexicon, not recency.
+  await seedLandings(page, [['resentful', 40]]);
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  const later = await page.evaluate(() => ({
+    rings: document.querySelectorAll('.constellation__adopted').length,
+    dots: document.querySelectorAll('.constellation__dot').length,
+  }));
+  ok('rings outlive the 24-day landing window', later.rings === 1 && later.dots === 0, JSON.stringify(later));
+  await page.close();
+}
+
 /* -------------------------------------------------------------- teardown --- */
 
 if (errors.length) {
