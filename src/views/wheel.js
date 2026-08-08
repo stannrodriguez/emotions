@@ -65,8 +65,16 @@ const bloomCaption = (familyId, count) =>
 const seamGuidance = (a, b) =>
   `${a} | ${b} — read both pages and notice which definition fits more closely.`;
 
-const leafPreview = (word) =>
-  `${word} — open its definition, close neighbors, and practical next steps.`;
+/**
+ * Leaf hover/focus preview. When the word anchors depth words, the caption
+ * names them — the deep vocabulary surfaces where it lives on the wheel, and
+ * its full definitions are one tap away on the leaf page's GO DEEPER module.
+ */
+const leafPreview = (word, deeper = []) =>
+  `${word} — open its definition, close neighbors, and practical next steps.` +
+  (deeper.length
+    ? ` Deeper still: ${deeper.map((d) => `${d.word} (${d.origin})`).join(', ')}.`
+    : '');
 
 /* ----------------------------------------------------------------- helpers */
 
@@ -332,7 +340,7 @@ export function createWheelView({ taxonomy, navigate }) {
       seg.style.pointerEvents = 'none';
       seg.addEventListener('focus', () => {
         focusIndex = i;
-        setCaption(leafPreview(word.id));
+        setCaption(leafPreview(word.id, taxonomy.depthsNear(word.id)));
         paintFocus();
       });
       seg.addEventListener('blur', () => paintFocus());
@@ -455,7 +463,11 @@ export function createWheelView({ taxonomy, navigate }) {
       const key = hit.kind === 'seam' ? `s:${hit.a}|${hit.b}` : `l:${hit.word.id}`;
       if (key === lastKey) return;
       lastKey = key;
-      setCaption(hit.kind === 'seam' ? describeSeam(hit.a, hit.b) : leafPreview(hit.word.id));
+      setCaption(
+        hit.kind === 'seam'
+          ? describeSeam(hit.a, hit.b)
+          : leafPreview(hit.word.id, taxonomy.depthsNear(hit.word.id))
+      );
     });
 
     surface.addEventListener('pointerleave', () => {

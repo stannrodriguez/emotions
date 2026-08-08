@@ -504,6 +504,52 @@ heading('8. Depths collection and the leaf GO DEEPER module');
   await page.close();
 }
 
+/* ------------------------------------------- 9. deeper-still previews ------ */
+
+heading('9. Bloom caption previews name a leaf\'s depth words');
+{
+  const page = await newPage();
+  const hoverPolar = async (radius, deg) => {
+    const box = await page.locator('.wheel__svg').boundingBox();
+    const t = (deg * Math.PI) / 180;
+    await page.mouse.move(
+      box.x + ((360 + radius * Math.sin(t)) / 720) * box.width,
+      box.y + ((360 - radius * Math.cos(t)) / 720) * box.height
+    );
+    await page.waitForTimeout(120);
+  };
+  const caption = () => page.locator('.wheel__caption').textContent();
+
+  await page.goto(`${base}/#/sad`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await hoverPolar(250, 75); // melancholy, one anchored depth word
+  ok('an anchored leaf appends its depth words', (await caption()).endsWith('Deeper still: toska (Russian).'), await caption());
+  await hoverPolar(250, 165); // hurt, no anchored depth words
+  ok(
+    'an unanchored leaf keeps the plain preview',
+    (await caption()) === 'hurt — open its definition, close neighbors, and practical next steps.',
+    await caption()
+  );
+
+  await page.goto(`${base}/#/afraid`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await hoverPolar(250, 81.8); // dreading, two anchored depth words
+  ok(
+    'multiple depth words are listed together',
+    (await caption()).endsWith('Deeper still: trepidation (English), torschlusspanik (German).'),
+    await caption()
+  );
+
+  // The keyboard path previews the same way the pointer does.
+  await page.goto(`${base}/#/sad`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await page.locator('.wheel__seg').first().focus();
+  await page.keyboard.press('ArrowRight');
+  await page.keyboard.press('ArrowRight'); // nostalgic → grieving → melancholy
+  ok('focus previews carry the depth words too', (await caption()).endsWith('Deeper still: toska (Russian).'), await caption());
+  await page.close();
+}
+
 /* -------------------------------------------------------------- teardown --- */
 
 if (errors.length) {
