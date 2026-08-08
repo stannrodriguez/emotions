@@ -3,11 +3,12 @@
  *   #/                    root wheel
  *   #/angry               bloomed family
  *   #/angry/resentful     leaf page
+ *   #/depths              deep vocabulary
  *   #/constellation       constellation
  *   #/lexicon             lexicon
  */
 
-const RESERVED = new Set(['constellation', 'lexicon']);
+const RESERVED = new Set(['depths', 'constellation', 'lexicon']);
 
 /**
  * Parse a location hash into a route.
@@ -36,6 +37,7 @@ export function parse(hash, taxonomy) {
 }
 
 export function href(route) {
+  if (route.view === 'depths') return '#/depths';
   if (route.view === 'constellation') return '#/constellation';
   if (route.view === 'lexicon') return '#/lexicon';
   if (route.word) return `#/${route.family}/${route.word}`;

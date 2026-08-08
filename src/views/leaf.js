@@ -9,6 +9,7 @@
  */
 
 import { keepWord, hasWord, subscribe } from '../core/storage.js';
+import { depthRow } from './depths.js';
 
 const MISSING_DEFINITION = 'Definition unavailable. Reload the page to try again.';
 
@@ -16,6 +17,9 @@ const KEEP_LABEL = '+ KEEP THIS WORD';
 /** Post-keep state for the same button. A UI state, not product copy. */
 const KEPT_LABEL = 'KEPT';
 const KEEP_NOTE = 'kept in your lexicon on this device';
+
+const DEEPER_NOTE =
+  'Finer words near this one, from other lexicons. Telling similar feelings apart is a skill — it grows one precise word at a time.';
 
 const titleCase = (word) => word.charAt(0).toUpperCase() + word.slice(1);
 
@@ -116,6 +120,21 @@ export function createLeafView({ taxonomy, navigate }) {
     paintKeep(keep, word.id);
     footer.append(keep, h('span', 'leaf__keep-note', KEEP_NOTE));
     card.appendChild(footer);
+
+    /* GO DEEPER — the depth words anchored to this wheel word. A separate,
+     * quieter card below the leaf: the 3b card above is signed off and stays
+     * exactly as designed. */
+    const deeper = taxonomy.depthsNear(word.id);
+    if (deeper.length) {
+      const aside = h('aside', 'leaf__deeper');
+      aside.appendChild(h('h3', 'leaf__section-label', 'GO DEEPER'));
+      aside.appendChild(h('p', 'leaf__deeper-note', DEEPER_NOTE));
+      for (const entry of deeper) {
+        aside.appendChild(depthRow(entry, taxonomy, { showNear: false }));
+      }
+      root.replaceChildren(card, aside);
+      return;
+    }
 
     root.replaceChildren(card);
   }

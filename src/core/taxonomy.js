@@ -31,29 +31,61 @@ function layout(families) {
   });
 }
 
-/** Load and decorate the taxonomy. Cached — the data file never changes at runtime. */
-export async function loadTaxonomy(url = new URL('../data/emotions.json', import.meta.url)) {
+/** Load and decorate the taxonomy. Cached — the data files never change at runtime. */
+export async function loadTaxonomy(
+  url = new URL('../data/emotions.json', import.meta.url),
+  depthsUrl = new URL('../data/depths.json', import.meta.url)
+) {
   if (cache) return cache;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Could not load emotions.json (${res.status})`);
   const raw = await res.json();
-  cache = build(raw);
+
+  // The depths collection is an enrichment, not a dependency: if it cannot be
+  // loaded the wheel still works, just without the deep-vocabulary layer.
+  let depths = null;
+  try {
+    const depthsRes = await fetch(depthsUrl);
+    if (depthsRes.ok) depths = await depthsRes.json();
+  } catch {
+    /* offline or missing — degrade to an empty collection */
+  }
+
+  cache = build(raw, depths);
   return cache;
 }
 
 /** Build the decorated taxonomy from parsed JSON. Split out so Node can test it. */
-export function build(raw) {
+export function build(raw, depths = null) {
   const families = layout(raw.families);
 
   const byFamily = new Map(families.map((f) => [f.id, f]));
   const byWord = new Map();
   families.forEach((f) => f.words.forEach((w, i) => byWord.set(w.id, { word: w, family: f, index: i })));
 
+  /* Depth words: each is anchored to its nearest wheel word (`near`), which
+   * resolves its family. Entries whose anchor does not resolve are dropped
+   * rather than rendered unmoored. */
+  const depthWords = (depths?.words ?? [])
+    .filter((d) => byWord.has(d.near))
+    .map((d) => ({ ...d, familyId: byWord.get(d.near).family.id }));
+  const depthsByAnchor = new Map();
+  for (const d of depthWords) {
+    if (!depthsByAnchor.has(d.near)) depthsByAnchor.set(d.near, []);
+    depthsByAnchor.get(d.near).push(d);
+  }
+
   return {
     families,
     distinctions: raw.distinctions,
     adoptedSeeds: raw.adoptedSeeds,
     wordCount: byWord.size,
+
+    /** The deep-vocabulary collection, in file order. */
+    depths: depthWords,
+    depthsNote: depths?.note ?? '',
+    /** Depth words anchored to a wheel word. */
+    depthsNear: (wordId) => depthsByAnchor.get(wordId) ?? [],
 
     family: (id) => byFamily.get(id) ?? null,
     word: (id) => byWord.get(id)?.word ?? null,

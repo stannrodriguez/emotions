@@ -1,0 +1,189 @@
+{
+  "_meta": {
+    "contentStatus": "Curated deep-vocabulary collection: precise English words and adopted foreign words, each anchored to its nearest wheel word.",
+    "wordCount": 30
+  },
+  "note": "The wheel's 63 words are a floor, not a ceiling. Psychologists call the skill of telling similar feelings apart emotional granularity, and research links a finer-grained emotion vocabulary with steadier regulation: each word you know is another shade you can feel in. These words go deeper than the wheel — adopt one and it joins your lexicon.",
+  "words": [
+    {
+      "word": "dumbfounded",
+      "origin": "English",
+      "near": "stunned",
+      "definition": "Astonished past speech; the reply you were forming is simply gone."
+    },
+    {
+      "word": "flummoxed",
+      "origin": "English",
+      "near": "bewildered",
+      "definition": "Confused to a standstill; the problem refuses to take a shape you can start on."
+    },
+    {
+      "word": "agog",
+      "origin": "English",
+      "near": "curious",
+      "definition": "Curiosity leaning forward on its toes, wide open for whatever comes next."
+    },
+    {
+      "word": "wonderstruck",
+      "origin": "English",
+      "near": "awed",
+      "definition": "Stopped by beauty or scale; the mind goes quiet instead of racing."
+    },
+    {
+      "word": "yūgen",
+      "origin": "Japanese",
+      "near": "awed",
+      "definition": "A quiet awareness of depths only suggested, never shown; awe with the mystery left in."
+    },
+    {
+      "word": "hygge",
+      "origin": "Danish",
+      "near": "content",
+      "definition": "Small, warm, shared comfort — lamplight, company, and nowhere else you need to be."
+    },
+    {
+      "word": "naches",
+      "origin": "Yiddish",
+      "near": "proud",
+      "definition": "Glowing pride in the achievement of someone you raised, taught, or love."
+    },
+    {
+      "word": "firgun",
+      "origin": "Hebrew",
+      "near": "joyful",
+      "definition": "Wholehearted delight in someone else's good fortune, with no envy pulling at its edge."
+    },
+    {
+      "word": "gigil",
+      "origin": "Tagalog",
+      "near": "affectionate",
+      "definition": "Affection so intense the body clenches; the urge to squeeze what is unbearably dear."
+    },
+    {
+      "word": "buoyant",
+      "origin": "English",
+      "near": "hopeful",
+      "definition": "Hope felt as lightness in the chest; it keeps rising without being argued into it."
+    },
+    {
+      "word": "hiraeth",
+      "origin": "Welsh",
+      "near": "homesick",
+      "definition": "Longing for a home you cannot return to, or one that never quite existed."
+    },
+    {
+      "word": "toska",
+      "origin": "Russian",
+      "near": "melancholy",
+      "definition": "A dull ache of the soul that longs without an object; sorrow with no address."
+    },
+    {
+      "word": "mono no aware",
+      "origin": "Japanese",
+      "near": "nostalgic",
+      "definition": "A soft sorrow at impermanence; things move you more because they are passing."
+    },
+    {
+      "word": "weltschmerz",
+      "origin": "German",
+      "near": "hopeless",
+      "definition": "Weariness at the gap between the world as it is and as it ought to be."
+    },
+    {
+      "word": "crestfallen",
+      "origin": "English",
+      "near": "disappointed",
+      "definition": "Disappointment you can see in the posture; the visible sag when an outcome lands short."
+    },
+    {
+      "word": "forlorn",
+      "origin": "English",
+      "near": "lonely",
+      "definition": "Lonely with the added sense of being left behind, and that no one is coming."
+    },
+    {
+      "word": "queasy",
+      "origin": "English",
+      "near": "squeamish",
+      "definition": "Disgust arriving as mild nausea; the stomach objects before the mind has its reasons."
+    },
+    {
+      "word": "aghast",
+      "origin": "English",
+      "near": "appalled",
+      "definition": "Appalled with the breath caught; horrified disbelief that someone actually did it."
+    },
+    {
+      "word": "jaded",
+      "origin": "English",
+      "near": "alienated",
+      "definition": "Worn numb by too much of what once delighted; the flavor is gone and a faint distaste remains."
+    },
+    {
+      "word": "loathing",
+      "origin": "English",
+      "near": "revolted",
+      "definition": "Disgust that has settled into hatred; not just recoiling, but wanting it gone."
+    },
+    {
+      "word": "ressentiment",
+      "origin": "French",
+      "near": "resentful",
+      "definition": "Resentment gone chronic; it stops seeking repair and rebuilds the world around the grudge."
+    },
+    {
+      "word": "litost",
+      "origin": "Czech",
+      "near": "bitter",
+      "definition": "The sudden torment of seeing your own misery clearly; grief and anger fused, looking for someone to blame."
+    },
+    {
+      "word": "aggrieved",
+      "origin": "English",
+      "near": "indignant",
+      "definition": "Wronged and carrying the case for it; anger with a grievance it can cite."
+    },
+    {
+      "word": "piqued",
+      "origin": "English",
+      "near": "irritated",
+      "definition": "A small, sharp irritation at a slight to your pride; minor, but it lands on the self."
+    },
+    {
+      "word": "seething",
+      "origin": "English",
+      "near": "furious",
+      "definition": "Full anger held under a closed lid — hot, pressurized, and not yet shown."
+    },
+    {
+      "word": "trepidation",
+      "origin": "English",
+      "near": "dreading",
+      "definition": "Fear that walks toward the thing anyway; dread with a date on the calendar."
+    },
+    {
+      "word": "torschlusspanik",
+      "origin": "German",
+      "near": "dreading",
+      "definition": "The gate-closing panic that time is running out on the life you meant to live."
+    },
+    {
+      "word": "harried",
+      "origin": "English",
+      "near": "overwhelmed",
+      "definition": "Chased by demands from every side; too hunted to think and too busy to stop."
+    },
+    {
+      "word": "iktsuarpok",
+      "origin": "Inuktitut",
+      "near": "anxious",
+      "definition": "The restlessness of waiting for someone — checking the window, the door, the road, again."
+    },
+    {
+      "word": "leery",
+      "origin": "English",
+      "near": "suspicious",
+      "definition": "Distrust learned from experience; you stay pleasant and keep your distance."
+    }
+  ]
+}

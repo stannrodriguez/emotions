@@ -10,6 +10,7 @@ import { loadTaxonomy } from './core/taxonomy.js';
 import { start, tabOf, navigate as go, href } from './core/router.js';
 import { createWheelView } from './views/wheel.js';
 import { createLeafView } from './views/leaf.js';
+import { createDepthsView } from './views/depths.js';
 import { createConstellationView } from './views/constellation.js';
 import { createLexiconView } from './views/lexicon.js';
 
@@ -19,6 +20,7 @@ import { createLexiconView } from './views/lexicon.js';
  */
 const VIEWS = {
   wheel: { tab: 'WHEEL', footnote: true, create: createWheelView },
+  depths: { tab: 'DEPTHS', create: createDepthsView },
   constellation: { tab: 'CONSTELLATION', create: createConstellationView },
   lexicon: { tab: 'LEXICON', create: createLexiconView },
   leaf: { create: createLeafView },
