@@ -1,13 +1,22 @@
 # Emotion Atlas
 
 A mobile-first, on-device emotion wheel. Six families bloom into 63 finer words;
-each word opens a page. Two secondary views: **Constellation** (recent landings
-drawn on the wheel's geometry) and **Lexicon** (kept words, including adopted
-foreign ones).
+each word opens a page. Three secondary views: **Depths** (a curated collection
+of finer words beyond the wheel, each anchored to its nearest wheel word),
+**Constellation** (recent landings drawn on the wheel's geometry) and
+**Lexicon** (kept words, including adopted foreign ones).
 
 Research on affect labeling suggests that putting feelings into words can
 reduce emotional reactivity. The app treats precise naming as a useful first
 step for reflection, not as therapy or diagnosis.
+
+The Depths view extends this with the related idea of *emotional granularity*
+(Lisa Feldman Barrett and colleagues): the skill of telling similar feelings
+apart finely, which grows the way any vocabulary grows — one precise word at a
+time. Its collection lives in `src/data/depths.json`: 30 words (uncommon
+English words and adopted foreign ones), each anchored to a wheel word so it
+also surfaces on that word's page as a GO DEEPER module. Adopting a depth word
+writes it to the lexicon in the same shape as the adopted seeds.
 
 No backend, no accounts, no analytics. All state is on-device.
 
@@ -34,13 +43,16 @@ npm run verify:all    # both
 `verify` checks family word counts (10 / 11 / 12 / 7 / 12 / 11 = 63), the six
 written distinction keys, the family seam edges, the greyscale lightness
 ordering, the within-bloom arousal ordering, label auto-fit and upside-down
-rotation, seam hit-zone widths, and the completeness and wheel adjacency of all
-63 authored emotion pages.
+rotation, seam hit-zone widths, the completeness and wheel adjacency of all
+63 authored emotion pages, and the depths collection (complete entries, valid
+wheel anchors, no collisions with wheel words or seeds, at least three per
+family).
 
 `verify:ui` drives the app: the radius-dependent seam rule, keyboard navigation,
-the five deep links, the bloom animation and its reduced-motion behaviour, the
-12px label floor across eight widths, authored leaf content, and first-run empty
-states.
+the six deep links, the bloom animation and its reduced-motion behaviour, the
+12px label floor across eight widths, authored leaf content, first-run empty
+states, and the depths adopt flow (including the leaf page's GO DEEPER module,
+which sits outside the pixel-diffed card).
 
 It also **pixel-diffs the leaf page against the design file's own 3b markup**,
 which it extracts from `design/Wheel Directions.dc.html` at runtime and serves
@@ -55,8 +67,8 @@ Both run in CI and gate the Pages deploy.
 
 ```
 src/core/       geometry, colour, taxonomy, storage, routing — no DOM
-src/views/      the four views
-src/data/       emotions.json — the canonical data file, loaded as-is
+src/views/      the five views
+src/data/       emotions.json + depths.json — the canonical data files, loaded as-is
 design/         the design handoff: spec, exploration document, screenshots
 scripts/        verification
 ```

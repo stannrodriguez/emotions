@@ -24,7 +24,10 @@ import {
 const raw = JSON.parse(
   readFileSync(fileURLToPath(new URL('../src/data/emotions.json', import.meta.url)), 'utf8')
 );
-const atlas = build(raw);
+const depths = JSON.parse(
+  readFileSync(fileURLToPath(new URL('../src/data/depths.json', import.meta.url)), 'utf8')
+);
+const atlas = build(raw, depths);
 
 let failures = 0;
 const check = (label, ok, detail = '') => {
@@ -220,6 +223,37 @@ for (const family of atlas.families) {
 }
 check('adopted seeds present', atlas.adoptedSeeds.length === 3);
 console.log(`  adopted seeds: ${atlas.adoptedSeeds.map((s) => `${s.word} (${s.origin})`).join(', ')}`);
+
+/* 9. Depths — the deep-vocabulary collection ------------------------------- */
+heading('9. Depths collection');
+const wheelIds = new Set(atlas.families.flatMap((f) => f.words.map((w) => w.id)));
+const seedWords = new Set(atlas.adoptedSeeds.map((s) => s.word));
+check('collection note is written', Boolean(depths.note?.trim()));
+check(
+  'every depth entry survives the build (all anchors resolve)',
+  atlas.depths.length === depths.words.length,
+  `${atlas.depths.length} of ${depths.words.length}`
+);
+check(
+  'every entry is complete (word, origin, near, definition)',
+  depths.words.every((d) => d.word?.trim() && d.origin?.trim() && d.near?.trim() && d.definition?.trim())
+);
+check('every anchor is a wheel word', depths.words.every((d) => wheelIds.has(d.near)));
+check(
+  'no depth word duplicates another',
+  new Set(depths.words.map((d) => d.word)).size === depths.words.length
+);
+check(
+  'no depth word collides with a wheel word or an adopted seed',
+  depths.words.every((d) => !wheelIds.has(d.word) && !seedWords.has(d.word))
+);
+for (const f of atlas.families) {
+  const count = atlas.depths.filter((d) => d.familyId === f.id).length;
+  console.log(`  ${f.id.padEnd(10)} ${count} depth words`);
+  check(`${f.id} has at least 3 depth words`, count >= 3, `got ${count}`);
+}
+check('depthsNear resolves an anchored word', atlas.depthsNear('resentful').some((d) => d.word === 'ressentiment'));
+check('depthsNear is empty for an unanchored word', atlas.depthsNear('amused').length === 0);
 
 /* ---------------------------------------------------------------------- */
 console.log(`\n${failures === 0 ? 'All checks passed.' : `${failures} check(s) FAILED.`}\n`);

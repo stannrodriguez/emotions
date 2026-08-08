@@ -290,6 +290,7 @@ heading('4. Deep links');
     ['#/', () => page.locator('.wheel__svg').getAttribute('aria-label'), 'six families'],
     ['#/angry', () => page.locator('.wheel__svg').getAttribute('aria-label'), 'angry bloomed'],
     ['#/angry/resentful', () => page.locator('.leaf__title').textContent(), 'Resentful'],
+    ['#/depths', () => page.locator('.depths__title').textContent(), 'DEPTHS'],
     ['#/constellation', () => page.locator('.constellation__heading').textContent(), 'RECENT LANDINGS'],
     ['#/lexicon', () => page.locator('.lexicon__title').textContent(), 'LEXICON'],
     ['#/nonsense', () => page.locator('.wheel__svg').getAttribute('aria-label'), 'six families'],
@@ -333,7 +334,7 @@ heading('5. Bloom animation');
 heading('6. Label floor and responsiveness');
 {
   const WIDTHS = [320, 360, 390, 430, 600, 768, 1024, 1440];
-  const ROUTES = ['#/', '#/afraid', '#/angry/resentful', '#/constellation', '#/lexicon'];
+  const ROUTES = ['#/', '#/afraid', '#/angry/resentful', '#/depths', '#/constellation', '#/lexicon'];
   let worst = Infinity;
   let overflowed = 0;
   let escaped = 0;
@@ -437,6 +438,69 @@ heading('7. Authored leaf and first-run empty states');
   await page.waitForTimeout(300);
   const seeds = await page.evaluate(() => [...document.querySelectorAll('.lexicon__word')].map((n) => n.textContent));
   ok('first run seeds the three adopted words', JSON.stringify(seeds) === '["saudade","fernweh","amae"]', JSON.stringify(seeds));
+  await page.close();
+}
+
+/* -------------------------------------------- 8. depths and going deeper --- */
+
+heading('8. Depths collection and the leaf GO DEEPER module');
+{
+  const page = await newPage({ viewport: { width: 460, height: 1200 } });
+  await page.goto(`${base}/#/depths`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  const depths = await page.evaluate(() => ({
+    count: document.querySelector('.depths__count').textContent,
+    rows: document.querySelectorAll('.depths__row').length,
+    families: [...document.querySelectorAll('.depths__family')].map((n) => n.textContent),
+    note: document.querySelector('.depths__note')?.textContent ?? '',
+    firstMeta: document.querySelector('.depths__meta')?.textContent,
+  }));
+  ok('all 30 depth words render', depths.rows === 30 && depths.count.startsWith('30 WORDS'), `${depths.rows} rows`);
+  ok(
+    'grouped by the six families in wheel order',
+    JSON.stringify(depths.families) === '["SURPRISED","HAPPY","SAD","DISGUSTED","ANGRY","AFRAID"]',
+    JSON.stringify(depths.families)
+  );
+  ok('the granularity note is rendered', depths.note.includes('emotional granularity'));
+  ok('rows carry origin and wheel anchor', depths.firstMeta === 'ENGLISH · NEAR STUNNED', depths.firstMeta);
+
+  // Adopting writes an adopted lexicon entry, records no landing, and paints
+  // the button's kept state.
+  const row = page.locator('.depths__row', { hasText: 'hiraeth' });
+  await row.locator('.depths__adopt').click();
+  await page.waitForTimeout(200);
+  const adopted = await page.evaluate(() => ({
+    entry: JSON.parse(localStorage.getItem('atlas.lexicon'))[0],
+    landings: JSON.parse(localStorage.getItem('atlas.landings') || '[]').length,
+  }));
+  ok(
+    'adopting writes the adopted entry with origin and definition',
+    adopted.entry.word === 'hiraeth' && adopted.entry.familyId === 'adopted' && adopted.entry.origin === 'Welsh' &&
+      adopted.entry.definition?.startsWith('Longing for a home'),
+    JSON.stringify(adopted.entry)
+  );
+  ok('adopting records no constellation landing', adopted.landings === 0);
+  const buttonState = await row.locator('.depths__adopt').evaluate((n) => ({ text: n.textContent, disabled: n.disabled }));
+  ok('the button shows the kept state', buttonState.text === 'ADOPTED' && buttonState.disabled, JSON.stringify(buttonState));
+
+  await page.goto(`${base}/#/lexicon`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  const lexiconMeta = await page.evaluate(
+    () => [...document.querySelectorAll('.lexicon__row')].find((n) => n.textContent.includes('hiraeth'))?.querySelector('.lexicon__meta')?.textContent
+  );
+  ok('the adopted word arrives in the lexicon with its origin', lexiconMeta === 'ADOPTED · WELSH', lexiconMeta);
+
+  // The leaf page's GO DEEPER module: anchored words below the signed-off card.
+  await page.goto(`${base}/#/angry/resentful`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  const deeper = await page.evaluate(() => ({
+    outsideCard: !document.querySelector('.leaf__card .leaf__deeper') && !!document.querySelector('.leaf .leaf__deeper'),
+    words: [...document.querySelectorAll('.leaf__deeper .depths__word')].map((n) => n.textContent),
+    meta: document.querySelector('.leaf__deeper .depths__meta')?.textContent,
+  }));
+  ok('GO DEEPER renders below the card, never inside it', deeper.outsideCard);
+  ok('it lists the words anchored to this leaf', JSON.stringify(deeper.words) === '["ressentiment"]', JSON.stringify(deeper.words));
+  ok('leaf rows show origin only — the anchor is this page', deeper.meta === 'FRENCH', deeper.meta);
   await page.close();
 }
 
