@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Emotion Atlas (working name) — a mobile-first, on-device emotion wheel. No backend, no build step.",
+  "description": "Emotion Atlas — a mobile-first, on-device emotion wheel. No backend, no build step.",
   "scripts": {
     "verify": "node scripts/verify-data.mjs",
     "start": "python3 -m http.server 4173",

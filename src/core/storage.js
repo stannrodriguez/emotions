@@ -2,8 +2,8 @@
  * On-device state. No backend, no accounts, no sync, no analytics.
  *
  * The `atlas.` key prefix is a FROZEN internal identifier, deliberately
- * independent of the product name (which is still undecided). Do not rename
- * these keys when the name lands — kept words would be lost to the migration.
+ * independent of the product name. Do not rename these keys — kept words
+ * would be lost to the migration.
  */
 
 export const KEYS = {
