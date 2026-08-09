@@ -16,7 +16,9 @@ import { createLexiconView } from './views/lexicon.js';
 
 /**
  * View registry. `tab` entries appear in the tab row, in this order; views
- * without one (the leaf page) are reachable by route only.
+ * without one (the leaf page) are reachable by route only. The leaf view is
+ * special-cased below: it renders in a side sheet over the reader's current
+ * view rather than replacing it.
  */
 const VIEWS = {
   wheel: { tab: 'WHEEL', footnote: true, create: createWheelView },
@@ -82,10 +84,55 @@ async function main() {
     tabLinks.set(key, link);
   }
 
+  /* --------------------------------------------------------- word sheet --- */
+
+  /* Word pages open in a side sheet over the active view, so closing one and
+   * choosing a different word never loses the reader's place on the wheel. */
+  const sheet = document.createElement('aside');
+  sheet.className = 'sheet';
+  sheet.hidden = true;
+  sheet.setAttribute('aria-label', 'Word page');
+
+  const sheetBar = document.createElement('div');
+  sheetBar.className = 'sheet__bar';
+  const sheetClose = document.createElement('button');
+  sheetClose.type = 'button';
+  sheetClose.className = 'sheet__close';
+  sheetClose.textContent = '× CLOSE';
+  sheetBar.appendChild(sheetClose);
+
+  const sheetBody = document.createElement('div');
+  sheetBody.className = 'sheet__body';
+
+  sheet.append(sheetBar, sheetBody);
+  document.body.appendChild(sheet);
+
+  /** Most recent non-leaf route: mounted under the sheet, and where close goes. */
+  let lastNonLeaf = null;
+  let sheetOpen = false;
+
+  const closeSheet = () => go(lastNonLeaf ?? { view: 'wheel', family: null, word: null });
+
+  sheetClose.addEventListener('click', closeSheet);
+
+  // Capture phase, so a first Escape closes the sheet without also reaching
+  // the wheel's document-level Escape (which would unbloom underneath it).
+  document.addEventListener(
+    'keydown',
+    (event) => {
+      if (event.key !== 'Escape' || sheet.hidden) return;
+      event.preventDefault();
+      event.stopPropagation();
+      closeSheet();
+    },
+    true
+  );
+
   /* -------------------------------------------------------------- views --- */
 
   const instances = new Map();
   let active = null;
+  let activeRoute = null;
 
   function viewFor(key) {
     if (instances.has(key)) return instances.get(key);
@@ -96,21 +143,66 @@ async function main() {
     return instance;
   }
 
+  const sameRoute = (a, b) =>
+    a && b && a.view === b.view && a.family === b.family && a.word === b.word;
+
   start(taxonomy, (route) => {
-    const key = VIEWS[route.view] ? route.view : 'wheel';
+    const isLeaf = route.view === 'leaf';
+
+    /* The view that owns the page. For a word, whatever the reader was looking
+     * at stays mounted underneath — defaulting to the word's bloomed family on
+     * a cold deep link, or re-blooming when the word belongs elsewhere. */
+    if (isLeaf) {
+      if (!lastNonLeaf || (lastNonLeaf.view === 'wheel' && lastNonLeaf.family !== route.family)) {
+        lastNonLeaf = { view: 'wheel', family: route.family, word: null };
+      }
+    } else {
+      lastNonLeaf = route;
+    }
+    const base = isLeaf ? lastNonLeaf : route;
+    const key = VIEWS[base.view] ? base.view : 'wheel';
     const instance = viewFor(key);
     if (!instance) return;
 
     if (active !== instance) {
       viewSlot.replaceChildren(instance.el);
       active = instance;
+      activeRoute = null;
       instance.mounted?.();
     }
-    instance.update(route);
+    // Skip the no-op update when only the sheet changed (word → word), so the
+    // wheel underneath doesn't re-bloom on every switch.
+    if (!sameRoute(base, activeRoute)) {
+      instance.update(base);
+      activeRoute = base;
+    }
+
+    if (isLeaf) {
+      const leaf = viewFor('leaf');
+      if (!sheetOpen) {
+        sheetOpen = true;
+        sheet.hidden = false;
+        document.body.classList.add('sheet-open');
+        sheetBody.replaceChildren(leaf.el);
+        leaf.mounted?.();
+        // Re-trigger the slide-in even when the class is already present.
+        sheet.classList.remove('sheet--in');
+        void sheet.offsetWidth;
+        sheet.classList.add('sheet--in');
+        sheetClose.focus({ preventScroll: true });
+      }
+      leaf.update(route);
+      sheetBody.scrollTop = 0;
+    } else if (sheetOpen) {
+      sheetOpen = false;
+      sheet.hidden = true;
+      document.body.classList.remove('sheet-open');
+      viewFor('leaf').destroy?.();
+    }
 
     footnote.hidden = !VIEWS[key].footnote;
 
-    const current = tabOf(route);
+    const current = tabOf(base);
     for (const [tabKey, link] of tabLinks) {
       if (tabKey === current) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
