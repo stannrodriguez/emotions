@@ -44,7 +44,7 @@ const DESKTOP_MAX = 560;
 /* ------------------------------------------------------------------ copy */
 
 const DEFAULT_CAPTION =
-  'Choose the closest family, then narrow it down. Precise naming can make an emotion easier to work with.';
+  'Choose the closest emotion family to explore its specific words.';
 
 /**
  * The affordance hint, taught once on first bloom.
@@ -58,12 +58,12 @@ const SEAM_HINT =
 let seamHintShown = false;
 
 const bloomCaption = (familyId, count) =>
-  `${familyId} → ${count} nearby shades. Choose the closest word.` +
+  `${familyId}: ${count} words. Choose the closest match.` +
   (seamHintShown ? '' : ` ${SEAM_HINT}`);
 
 /** Guidance for a boundary without a pair-specific authored distinction. */
 const seamGuidance = (a, b) =>
-  `${a} | ${b} — read both pages and notice which definition fits more closely.`;
+  `${a} vs. ${b}: open both pages to see which definition fits more closely.`;
 
 /**
  * Leaf hover/focus preview. When the word anchors depth words, the caption
@@ -71,7 +71,7 @@ const seamGuidance = (a, b) =>
  * its full definitions are one tap away on the leaf page's GO DEEPER module.
  */
 const leafPreview = (word, deeper = []) =>
-  `${word} — open its definition, close neighbors, and practical next steps.` +
+  `${word}: open its definition, nearby words, and what helps.` +
   (deeper.length
     ? ` Deeper still: ${deeper.map((d) => `${d.word} (${d.origin})`).join(', ')}.`
     : '');
@@ -312,7 +312,7 @@ export function createWheelView({ taxonomy, navigate }) {
   }
 
   const bloomPreview = (family) =>
-    `${family.id} — ${family.words.length} finer words. Tap to explore.`;
+    `${family.id}: ${family.words.length} words. Select to open.`;
 
   /* ---------------------------------------------------------------- bloom --- */
 
@@ -383,7 +383,7 @@ export function createWheelView({ taxonomy, navigate }) {
       class: 'wheel__center-hit',
       role: 'button',
       tabindex: '0',
-      'aria-label': `${family.id} — back to all families`,
+      'aria-label': `${family.id}: back to all families`,
     });
     centre.appendChild(
       el('circle', {

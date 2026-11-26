@@ -90,7 +90,8 @@ const base = `http://127.0.0.1:${PORT}`;
     .replace(
       'saved words live in your lexicon, on this device',
       'kept in your lexicon on this device'
-    );
+    )
+    .replaceAll('</strong> — ', '</strong>: ');
   extras.set(
     '/__design-3b',
     `<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/assets/fonts.css">` +
@@ -208,7 +209,7 @@ heading('2. Seam distinctions');
   await clickPolar(200, 30); // contemptuous|envious, no pair-specific copy
   ok(
     'generic boundary guidance is shippable',
-    (await caption()) === 'contemptuous | envious — read both pages and notice which definition fits more closely.'
+    (await caption()) === 'contemptuous vs. envious: open both pages to see which definition fits more closely.'
   );
 
   await clickPolar(200, 155);
@@ -527,7 +528,7 @@ heading('9. Bloom caption previews name a leaf\'s depth words');
   await hoverPolar(250, 165); // hurt, no anchored depth words
   ok(
     'an unanchored leaf keeps the plain preview',
-    (await caption()) === 'hurt — open its definition, close neighbors, and practical next steps.',
+    (await caption()) === 'hurt: open its definition, nearby words, and what helps.',
     await caption()
   );
 
@@ -585,7 +586,7 @@ heading('10. Adopted depth words on the constellation');
   ok('landing dots are unaffected', map.dots === 1, `${map.dots} dots`);
   ok('the ring is anchored and tappable', map.hits.includes('hiraeth, adopted near homesick'), JSON.stringify(map.hits));
   ok('rings are not auto-labeled — only the newest landing is', JSON.stringify(map.labels) === '["resentful"]', JSON.stringify(map.labels));
-  ok('the caption explains the rings', map.caption.endsWith('Hollow rings are adopted words, drawn near their wheel anchors.'), map.caption);
+  ok('the caption explains the rings', map.caption.endsWith('Hollow rings are adopted words, placed near their closest wheel word.'), map.caption);
   ok('the svg names both kinds of mark', map.aria.includes('1 landing') && map.aria.includes('1 adopted word'), map.aria);
 
   await page.evaluate(() => {

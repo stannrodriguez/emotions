@@ -37,12 +37,12 @@ async function main() {
 
   let taxonomy;
   try {
-    mount.innerHTML = '<p class="shell__loading">Loading the atlas…</p>';
+    mount.innerHTML = '<p class="shell__loading">Loading Emotion Atlas...</p>';
     taxonomy = await loadTaxonomy();
   } catch (error) {
     mount.removeAttribute('aria-busy');
     mount.innerHTML =
-      '<p class="shell__error">Emotion Atlas couldn’t start. Reload the page to try again.</p>';
+      '<p class="shell__error">Could not load Emotion Atlas data. Reload the page to try again.</p>';
     console.error(error);
     return;
   }
@@ -61,7 +61,7 @@ async function main() {
 
   const tabs = document.createElement('nav');
   tabs.className = 'shell__tabs';
-  tabs.setAttribute('aria-label', 'Primary views');
+  tabs.setAttribute('aria-label', 'Primary navigation');
 
   const viewSlot = document.createElement('main');
 
@@ -91,7 +91,7 @@ async function main() {
   const sheet = document.createElement('aside');
   sheet.className = 'sheet';
   sheet.hidden = true;
-  sheet.setAttribute('aria-label', 'Word page');
+  sheet.setAttribute('aria-label', 'Emotion details');
 
   const sheetBar = document.createElement('div');
   sheetBar.className = 'sheet__bar';
@@ -99,6 +99,7 @@ async function main() {
   sheetClose.type = 'button';
   sheetClose.className = 'sheet__close';
   sheetClose.textContent = '× CLOSE';
+  sheetClose.setAttribute('aria-label', 'Close emotion details');
   sheetBar.appendChild(sheetClose);
 
   const sheetBody = document.createElement('div');
@@ -209,9 +210,12 @@ async function main() {
     }
 
     document.title =
-      route.word ? `${titleCase(route.word)} — Emotion Atlas`
-      : route.family ? `${titleCase(route.family)} — Emotion Atlas`
-      : 'Emotion Atlas';
+      route.word ? `${titleCase(route.word)} | Emotion Atlas`
+      : route.family ? `${titleCase(route.family)} | Emotion Atlas`
+      : route.view === 'depths' ? 'Depths | Emotion Atlas'
+      : route.view === 'constellation' ? 'Constellation | Emotion Atlas'
+      : route.view === 'lexicon' ? 'Lexicon | Emotion Atlas'
+      : 'Emotion Atlas: Emotion Wheel and Private Lexicon';
   });
 }
 

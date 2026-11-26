@@ -45,12 +45,12 @@ const RING_REC = 0.5;
 const RING_SPREAD_DEG = 7;
 
 const CAPTION =
-  'The newest landing is labeled. Tap any dot to name it; brighter dots are newer. A mirror, not a tracker.';
+  'The newest landing is labeled. Select any dot to see its word; brighter dots are more recent. A mirror, not a tracker.';
 
 const EMPTY_CAPTION =
-  'Keep a word to place it here. Over time, your recent landings form a constellation.';
+  'Keep a word to place it here. Words you keep from the wheel appear here for 24 days.';
 
-const RINGS_NOTE = 'Hollow rings are adopted words, drawn near their wheel anchors.';
+const RINGS_NOTE = 'Hollow rings are adopted words, placed near their closest wheel word.';
 
 function el(name, attrs = {}, text) {
   const node = document.createElementNS(SVG_NS, name);

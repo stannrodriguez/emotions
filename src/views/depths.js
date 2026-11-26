@@ -54,6 +54,7 @@ export function depthRow(entry, taxonomy, { showNear = true } = {}) {
     const kept = hasWord(entry.word, taxonomy.adoptedSeeds);
     adopt.textContent = kept ? ADOPTED_LABEL : ADOPT_LABEL;
     adopt.disabled = kept;
+    adopt.setAttribute('aria-label', kept ? `${entry.word}, adopted` : `Adopt ${entry.word}`);
   };
   adopt.addEventListener('click', () => {
     keepWord(
@@ -99,7 +100,7 @@ export function createDepthsView({ taxonomy }) {
     }
 
     card.appendChild(
-      h('p', 'depths__footnote', 'Adopted words live in your lexicon, on this device.')
+      h('p', 'depths__footnote', 'Adopted words are saved in your lexicon on this device.')
     );
 
     root.replaceChildren(card);
