@@ -11,7 +11,7 @@ const EMPTY_LEXICON = 'No kept words yet. Keep one from any emotion page, or add
 
 const ADD_PLACEHOLDER = '+ ADD YOUR OWN WORD';
 const FOOTNOTE =
-  'Wheel words keep their full page. Your own words stay private on this device.';
+  'Press Enter to add your own word. Wheel words link back to their full page, and everything stays private on this device.';
 
 function h(tag, className, text) {
   const node = document.createElement(tag);
@@ -86,7 +86,7 @@ export function createLexiconView({ taxonomy, navigate }) {
     input.className = 'lexicon__add';
     input.type = 'text';
     input.placeholder = ADD_PLACEHOLDER;
-    input.setAttribute('aria-label', 'Add your own word');
+    input.setAttribute('aria-label', 'Add your own word and press Enter');
     input.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter') return;
       const word = input.value.trim();

@@ -19,7 +19,7 @@ const KEPT_LABEL = 'KEPT';
 const KEEP_NOTE = 'kept in your lexicon on this device';
 
 const DEEPER_NOTE =
-  'Finer words near this one, from other lexicons. Telling similar feelings apart is a skill — it grows one precise word at a time.';
+  'More specific words near this one, from English and other languages. Telling similar feelings apart is a skill that grows one word at a time.';
 
 const titleCase = (word) => word.charAt(0).toUpperCase() + word.slice(1);
 
@@ -80,7 +80,7 @@ export function createLeafView({ taxonomy, navigate }) {
       for (const entry of word.nearby) {
         const p = h('p', 'leaf__nearby');
         p.appendChild(h('strong', null, entry.word));
-        p.appendChild(document.createTextNode(` — ${entry.contrast}`));
+        p.appendChild(document.createTextNode(`: ${entry.contrast}`));
         section.appendChild(p);
       }
       card.appendChild(section);
@@ -95,7 +95,7 @@ export function createLeafView({ taxonomy, navigate }) {
         block.appendChild(h('p', 'leaf__technique-body', technique.body));
         const breaks = h('p', 'leaf__breaks');
         breaks.appendChild(h('strong', 'leaf__breaks-label', 'WHERE IT BREAKS'));
-        breaks.appendChild(document.createTextNode(` — ${technique.whereItBreaks}`));
+        breaks.appendChild(document.createTextNode(`: ${technique.whereItBreaks}`));
         block.appendChild(breaks);
         section.appendChild(block);
       }

@@ -3,7 +3,7 @@
 A mobile-first, on-device emotion wheel. Six families bloom into 63 finer words;
 each word opens a page. Three secondary views: **Depths** (a curated collection
 of finer words beyond the wheel, each anchored to its nearest wheel word),
-**Constellation** (recent landings drawn on the wheel's geometry) and
+**Constellation** (recent landings drawn on the wheel's geometry), and
 **Lexicon** (kept words, including adopted foreign ones).
 
 Research on affect labeling suggests that putting feelings into words can
@@ -12,7 +12,7 @@ step for reflection, not as therapy or diagnosis.
 
 The Depths view extends this with the related idea of *emotional granularity*
 (Lisa Feldman Barrett and colleagues): the skill of telling similar feelings
-apart finely, which grows the way any vocabulary grows — one precise word at a
+apart finely, which grows the way any vocabulary grows, one precise word at a
 time. Its collection lives in `src/data/depths.json`: 30 words (uncommon
 English words and adopted foreign ones), each anchored to a wheel word so it
 also surfaces on that word's page as a GO DEEPER module. Adopting a depth word
@@ -22,8 +22,8 @@ No backend, no accounts, no analytics. All state is on-device.
 
 ## Running it
 
-There is no build step. It is a static site of ES modules, SVG, and two Google
-fonts.
+There is no build step. It is a static site of ES modules, SVG, and two
+self-hosted IBM Plex fonts.
 
 ```sh
 npm start          # serves the repo root at http://localhost:4173
@@ -35,7 +35,7 @@ because ES modules and `fetch` need an HTTP origin.
 ## Verification
 
 ```sh
-npm run verify        # data, palette, geometry — no browser
+npm run verify        # data, palette, geometry (no browser)
 npm run verify:ui     # the rendered app, in Chromium
 npm run verify:all    # both
 ```
@@ -57,7 +57,7 @@ which sits outside the pixel-diffed card).
 It also **pixel-diffs the leaf page against the design file's own 3b markup**,
 which it extracts from `design/Wheel Directions.dc.html` at runtime and serves
 alongside the build. Comparing against `screenshots/leaf-page.png` would be
-misleading — that capture was made on a platform whose text shaping is ~1.4%
+misleading. That capture was made on a platform whose text shaping is ~1.4%
 narrower at 14.5px, which reflows a line. Diffing against the markup removes
 the platform from the comparison. It reports zero differing pixels.
 
@@ -66,9 +66,9 @@ Both run in CI and gate the Pages deploy.
 ## Layout
 
 ```
-src/core/       geometry, colour, taxonomy, storage, routing — no DOM
+src/core/       geometry, colour, taxonomy, storage, routing (no DOM)
 src/views/      the five views
-src/data/       emotions.json + depths.json — the canonical data files, loaded as-is
+src/data/       emotions.json + depths.json: the canonical data files, loaded as-is
 design/         the design handoff: spec, exploration document, screenshots
 scripts/        verification
 ```
@@ -97,7 +97,7 @@ name. Renaming it would lose every kept word without a migration.
 
 ## Deployment
 
-Static; deploys to GitHub Pages from the repo root. There is no build step — the
+Static; deploys to GitHub Pages from the repo root. There is no build step. The
 site is the repository, and every path is relative, so it also works from a
 project subpath.
 
@@ -109,5 +109,5 @@ first deploy can succeed. Go to **Settings → Pages → Build and deployment** 
 set **Source** to **GitHub Actions**, then re-run the workflow. The workflow
 passes `enablement: true`, which turns Pages on by itself where the token allows
 it, but creating a Pages site needs repository-admin rights that the default
-`GITHUB_TOKEN` does not carry — it fails with *"Create Pages site failed:
+`GITHUB_TOKEN` does not carry, so it fails with *"Create Pages site failed:
 Resource not accessible by integration"* until the setting is flipped by hand.
